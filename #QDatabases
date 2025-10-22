@@ -5,83 +5,6 @@ In this course, we cover the fundamental principles of databases in both theory 
 We focus primarily on relational databases and the SQL query language, but we also get acquainted with document databases.
 
 1. Database
-Question: What is a database and why is it important in managing data?
-
-2. Table (Relation)
-Question: What is a table in a relational database, and how does it organize data?
-
-3. Row (Tuple)
-Question: What is a row (or tuple) in a relational database, and what kind of information does it represent?
-
-4. Column (Attribute)
-Question: What is the role of a column (attribute) in a relational database table, and how is it defined?
-
-5. Primary Key (PK)
-Question: What is a primary key, and why must it be unique in every row of a table?
-
-6. Foreign Key (FK)
-Question: How does a foreign key create a relationship between two tables in a relational database?
-
-7. Domain
-Question: What is a domain in the context of a relational database, and how does it affect the values a column can hold?
-
-8. Cardinality
-Question: What are the three types of cardinality in database relationships, and how do they impact how tables are related?
-
-9. Normalization
-Question: What is the purpose of database normalization, and how does it improve the structure of the data?
-
-10. SQL (Structured Query Language)
-Question: What is SQL, and what role does it play in interacting with relational databases?
-
-11. Unique Key
-Question: How does a unique key differ from a primary key, and when might it be used?
-
-12. Index
-Question: What is an index in a database, and how does it improve data retrieval performance?
-
-13. NULL
-Question: What does a NULL value represent in a relational database, and how does it differ from an empty string or zero?
-
-14. Relationship Between Tables
-Question: How do relationships between tables (e.g., one-to-one, one-to-many, many-to-many) help organize data in a relational database?
-
-15. Schema
-Question: What is a database schema, and what does it define in terms of table structure and relationships?
-
-16. Transactions
-Question: What is a transaction in a database, and what are the key properties that ensure its reliability (ACID)?
-
-17. SQL Joins
-Question: What is the difference between an INNER JOIN, LEFT JOIN, and RIGHT JOIN in SQL, and how are they used to retrieve data from multiple tables?
-
-18. Composite Key
-Question: What is a composite key, and when would you use multiple columns to create a primary key?
-
-19. Candidate Key
-Question: What is a candidate key, and how is it different from a primary key in a relational database?
-
-20. Alternate Key
-Question: What is an alternate key, and how does it relate to the candidate keys in a database table?
-
-21. Superkey
-Question: What is a superkey, and how is it related to a primary key in terms of uniquely identifying a record?
-
-22. Natural Key
-Question: What is a natural key, and what are the advantages and disadvantages of using it in a relational database?
-
-23. Surrogate Key
-Question: What is a surrogate key, and why might it be used in place of a natural key or composite key?
-
-Each question corresponds to a key concept in relational databases and SQL. These can help you reinforce your understanding of database management, structure, and relationships. Let me know if you'd like more detail on any of these!
-
-Du sade:
-and the answer to it
-
-ChatGPT sade:
-Sure! Here are the answers to the questions based on the terms and concepts related to databases and SQL:
-
-1. Database
 Question: What is a database and why is it important in managing data? Answer: A database is a structured collection of data that is stored and managed to allow for easy retrieval, modification, and organization. It is important because it helps store large amounts of data efficiently, maintain data integrity, and provide a method for querying and analyzing the data.
 
 2. Table (Relation)
@@ -194,3 +117,50 @@ Question: Why would you choose a surrogate key over a natural key? Answer: A s
 Question: How is a unique key different from a primary key, and in what situations would you use each? Answer: Both unique keys and primary keys ensure that column values are unique. However:
 * A primary key is the main identifier for records and cannot contain NULL values.
 * A unique key also enforces uniqueness but can allow NULL values (unless restricted). You would use a primary key for the column that uniquely identifies records, and a unique key to enforce uniqueness on other important attributes (like an email address or username).
+
+31. What are the three levels of the database architecture, and what does each level represent?
+Answer: The three-level database architecture consists of the following levels:
+External Level: This represents the user's view of the database. It describes the part of the database that is relevant to a specific user or group of users, focusing on how the data appears to them. Different users may have different views of the same data depending on their needs.
+Conceptual Level: This is the community view of the database, representing the entire database's structure as seen by all users. It describes what data is stored in the database, the relationships among the data, and the constraints on that data, without focusing on how the data is physically stored.
+Internal Level: This level deals with the physical representation of the database on the computer. It describes how the data is actually stored, organized, and managed on storage devices, including the structure of files, indexing, and access paths.
+
+32. What is DDL?
+Answer: Data Definition Language
+
+33. What is DML?
+Answer: Data Manipulation Language - General enquiry facility (query language) of the data
+
+34. What is ER?
+Answer: Entity-Relationship (ER) diagrams and data dictionaries which together make up a conceptual design of the database
+
+35. What is a tuple, degree and cardinality?
+Answer: Tuple a row of a relation, Degree is the number of attributes in a relation and Cardinality is the number of tuples in a relation.
+
+36. What is a tuple in a relational database, and what does it represent?
+Answer: A tuple is a row in a relation (table) that contains a set of values for each attribute (column). Each tuple represents a unique instance or record in the database. For example, in a "Customers" table, a tuple might represent a single customer, with values for attributes like CustomerID, Name, and Email.
+
+37. What does the degree of a relation represent in a relational database?
+Answer: The degree of a relation refers to the number of attributes (columns) in a table. It tells you how many fields are included in each tuple (row). For example, a "Products" table with columns for ProductID, ProductName, Price, and Stock has a degree of 4.
+
+38. What is the cardinality of a relation, and what does it measure?
+Answer: The cardinality of a relation refers to the number of tuples (rows) in a table. It measures how many records are stored in that relation. For instance, if the "Employees" table has 200 rows, the cardinality of that relation is 200.
+
+39. How are the terms tuple, degree, and cardinality related in the context of a relational database?
+Answer: In a relational database, a tuple is a single record (row) in a table. The degree of a table is the number of attributes (columns) it has, and the cardinality refers to the number of tuples (rows) in that table. Together, these concepts describe the structure and size of a table:
+
+A table has multiple tuples (rows),
+Each tuple contains values for a certain number of attributes (columns),
+The cardinality is the total number of rows in the table.
+
+40. How would you calculate the cardinality and degree of a table like this one:
+
+EmployeeID	Name	Position	Salary
+1	Alice	Manager	80000
+2	Bob	Developer	60000
+3	Charlie	Developer	62000
+
+Answer:Degree: This table has 4 columns: EmployeeID, Name, Position, and Salary. So, the degree is 4.
+Cardinality: The table has 3 rows (one for each employee), so the cardinality is 3.
+
+41. Is there a difference between a tuple and a row in a relational database?
+Answer: No, in the context of relational databases, the terms tuple and row are used interchangeably. Both refer to a single, complete record in a table, which contains values for each attribute defined by the table's columns.
