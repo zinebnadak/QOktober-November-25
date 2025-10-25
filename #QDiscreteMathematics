@@ -1,1 +1,63 @@
+SET THEORY
+
+#1 What is a set and elements in mathematics?
+- A set is a collection of objects that share something in common, such as numbers, letters, or other items.
+- In discrete mathematics, we usually work with sets of numbers. An object that belongs to a set is called an element.
+
+#2 How can you describe a set?
+- A set can be described in three ways:
+1. In text-format: "A is a set of all numbers greater than 3"
+2. As enumeration: For example , A = {3,4,5,...}
+3. As a set-builder notation: For example, A = {x∣x≥3 and x∈Z}, meaning "A is the set of all x such that x is greater than or equal to 3, and x is an integer."
+
+#3 What does it mean for an element to belong to a set, how do we express that?
+- If an element (x) belongs to a set (A), we write 𝑥∈𝐴. If an element does not belong to a set, we write 𝑥∉𝐴
+
+#4 What is a subset?
+- A set (B) is a subset of a set (A) if all elements in (B) are also in (A). This is written as 𝐵⊆𝐴.
+- If (A) contains more elements than (B), then we call (B) a proper subset, which is written as 𝐵⊂𝐴.
+
+#5 What is cardinality?
+- The cardinality of a set is the number of elements in the set. If A = {1,2,5}, then the cardinality is |A| = 3
+
+#6 What are the natural numbers?
+- The natural numbers 𝑁 are the set of non-negative integers, i.e., 𝑁 = {0,1,2,3,....}
+
+#7 What are the integers?
+- The integers 𝑍 include both positive and negative whole numbers, as well as zero. That is, 𝑍 = {...,-2,-1,0,1,2,...}
+
+#8 What are rational numbers?
+- Rational numbers Q are numbers that can be written as a/b, where a and b are integers and b (eg base) not equals to 0
+
+#9 What are real numbers?
+- Real numbers R include all rational numbers as well as irrational numbers (such as sqrt(2),π, and 𝑒)
+
+#10 What are complex numbers?
+- Complex numbers C are numbers of the form a+bi, where a and b are real numbers and i is the imaginary unit (i^2 =-1)
+
+#11 What is the union of sets?
+- The union A U B of two sets A and B is the set of all elements that are in either A, B or both, each number is mentioned once if the number is in both
+- For example, if A = {1,2} and B = {2,3,5}, then A U B = {1,2,3,5}
+
+#12 What is the intersection of sets?
+- The intersection A ∩ B of two sets A and B is set of all elements that are in both A and B.
+- If A = {1,2}. If A ={1,2} and B = {2,3,5}, then A ∩ B = {2}
+
+#13 What is the difference of sets?
+- The difference A\B of two sets A and B is the set of all elements that are in A but not in B.
+- For example , if A = {1,2} and B = {2,3,5}, then A\B = {1}
+
+#14 What is the complement of a set?
+- the complement A^c of a set A in a universal set U is the set of all elements U that are not in A.
+- If A = {1,2} and U = {0,1,2,3,4,5}, then the complement A^c = {0,3,4,5}
+
+#15 What is the universal set?
+- The universal set 𝑈 is the set that contains all possible elements in a given context.
+- For example, if we are working with sets of integers, 𝑈 could be the set of all integers.
+
+#16 What is the empty set?
+- The empty set ∅ is a set that contains no elements.
+
+#17 What does 𝐴=B mean?
+- If two sets A=B are equal, i.e A=B, it means that they contain exactly the same elements.
 
