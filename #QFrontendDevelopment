@@ -1,1 +1,102 @@
+# Introduction to HTML (Hypertext Markup Language) for a deeper dive into UI
+# use sublime for mac as editor (for windows use notepad as editor)
 
+#1 Briefly explain HTML 4, HTML 5 and XHTML!
+# HTML 4.01 (released in 1999) was essentially a minor revision of HTML 4,and aimed to separate content from presentation, encouraging the use of CSS (Cascading Style Sheets) for styling instead of inline attributes. It introduced a more structured and semantic way of building web pages.
+# HTML5 introduced many new elements and features to support modern web applications, multimedia, and better performance on mobile devices. It also made the syntax cleaner and more flexible. HTML5 includes new semantic elements and better support for APIs, like audio, video, and geolocation.
+# XHTML was developed to combine HTML's ease of use with XML's strict syntax rules. It was intended to make HTML documents more reliable and consistent by enforcing a stricter syntax. XHTML must be well-formed XML, which means:
+- All tags must be closed (e.g., <br />, <img />).
+- Tags must be properly nested.
+- All attribute values must be quoted (e.g., src="image.jpg").
+- The document must have a proper DOCTYPE and comply with XML’s case-sensitivity (all tags must be lowercase).
+
+#2 What are elements and tags? (and attributes)
+# Fundamental concepts that help define the structure and content of a web page.
+
+# An HTML element is a complete structure used to define content on a webpage. It consists of an opening tag, content (optional), and a closing tag. The element tells the browser what kind of content it is displaying and how to structure it.
+Basic Structure of an Element:
+<tagname>Content goes here</tagname>
+
+examples of different elements:
+<p> is an element that defines a paragraph of text.
+<h1> is an element used to define the largest heading.
+
+
+# A tag is a part of an HTML element and defines the type of the element. There are two types of tags:
+- Opening tag: Marks the beginning of an element. <tagname>
+- Closing tag: Marks the end of an element. </tagname> (note the forward slash / before the tag name)
+
+Attributes provide additional information about an element, such as styles, classes, or other properties. They are written inside the opening tag and are usually composed of a name and a value.
+<tagname attribute="value">Content goes here</tagname>
+
+#3 Common HTML Tags
+<html>: Defines the start of an HTML document.
+<head>: Contains meta-information, links to stylesheets, and other resources.
+<body>: Contains the content of the webpage that the user will see.
+<h1> to <h6>: Heading tags. <h1> is the most important and largest, <h6> is the smallest.
+<p>: Represents a paragraph.
+<a>: Anchor tag, used to create hyperlinks.
+<img>: Displays an image.
+<ul>: Unordered list.
+<ol>: Ordered list (with numbered items).
+<table>: Creates a table.
+<div>: A generic container used for grouping content (used with CSS for layout)
+<span>: A generic inline container used to style part of a text or other content.
+<img> element is used to display images on a webpage.
+<br> element is used to insert a line break, which means it moves content to the next line, similar to how pressing Enter works in a text editor.
+
+#4 explain the structure of nested elements in HTML
+elements do always need to be provided in a structrue similar to "onion rings".
+Nesting refers to placing one HTML element inside another. This is a fundamental concept in HTML because it allows you to create complex structures and organize content in a logical, hierarchical way.
+When elements are nested, they form a parent-child relationship, where:
+- The parent element is the element that contains other elements (its children).
+- The child element is the element that is nested inside the parent.
+
+<parent-element>
+    <child-element>
+        <nested-child-element>Content here</nested-child-element>
+    </child-element>
+</parent-element>
+
+
+#5 Explain how Nesting Works with Tags, and its core structure
+In HTML, block-level elements (like <div>, <p>, <h1> to <h6>, etc.) can contain inline elements (like <span>, <a>, <strong>, etc.).
+<p>This is a <strong>bold</strong> text.</p>
+<p> is a block element containing an inline element <strong>.
+<strong> makes the text inside it bold.
+
+#6 HTML BASIC DOCUMENT STRUCTURE
+<html>          - html alltid första elementet allt annat än innehåll placeras här
+    <head>      - html-sida har alltid ett head element där sidans metadata, css och javascript-kod placeras
+    </head>
+    <body>      - html-sida har alltid ett <body> element där 99% av sidans synliga innehåll placeras
+    </body>
+</html>
+
+
+OR
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zineb's Webpage</title>
+    </head>
+    <body>
+        <div>
+            <h1>Welcome to Zineb's Webpage</h1>
+        </div>
+
+        <div>
+            <img src="logo.gif" alt="Website Logo">
+        </div>
+    </body>
+</html>
+
+#7 What is meta data?
+Metadata refers to data about data.
+In the context of web development, meta tags in HTML are used to provide information about a webpage to browsers, search engines, and other external systems.
+
+#8 What does "gif" stand for?
+GIF stands for Graphics Interchange Format. It is a bitmap image format that supports both static and animated images
