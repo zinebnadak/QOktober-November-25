@@ -16,7 +16,7 @@
 #4 What is a subset?
 - A set (B) is a subset of a set (A) if all elements in (B) are also in (A). This is written as 𝐵⊆𝐴.
 - If (A) contains more elements than (B), then we call (B) a proper subset, which is written as 𝐵⊂𝐴.
-
+.
 #5 What is cardinality?
 - The cardinality of a set is the number of elements in the set. If A = {1,2,5}, then the cardinality is |A| = 3
 
