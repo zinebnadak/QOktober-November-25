@@ -1,6 +1,9 @@
 # Introduction to HTML (Hypertext Markup Language) for a deeper dive into UI
 # use sublime for mac as editor (for windows use notepad as editor)
 
+
+--- 03 HTML 1 ---
+
 #1 Briefly explain HTML 4, HTML 5 and XHTML!
 # HTML 4.01 (released in 1999) was essentially a minor revision of HTML 4,and aimed to separate content from presentation, encouraging the use of CSS (Cascading Style Sheets) for styling instead of inline attributes. It introduced a more structured and semantic way of building web pages.
 # HTML5 introduced many new elements and features to support modern web applications, multimedia, and better performance on mobile devices. It also made the syntax cleaner and more flexible. HTML5 includes new semantic elements and better support for APIs, like audio, video, and geolocation.
@@ -100,3 +103,6 @@ In the context of web development, meta tags in HTML are used to provide informa
 
 #8 What does "gif" stand for?
 GIF stands for Graphics Interchange Format. It is a bitmap image format that supports both static and animated images
+
+
+--- 04 HTML 1 ---

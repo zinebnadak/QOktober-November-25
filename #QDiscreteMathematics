@@ -8,7 +8,7 @@
 - A set can be described in three ways:
 1. In text-format: "A is a set of all numbers greater than 3"
 2. As enumeration: For example , A = {3,4,5,...}
-3. As a set-builder notation: For example, A = {x∣x≥3 and x∈Z}, meaning "A is the set of all x such that x is greater than or equal to 3, and x is an integer."
+3. As a set-builder notation: For example, A = {x∣x≥3 and x∈Z}, meaning efwerything said after the "|" describes conditions the element of set "x" needs to have. Here A is the set of all x such that x is greater than or equal to 3, and x is an integer."
 
 #3 What does it mean for an element to belong to a set, how do we express that?
 - If an element (x) belongs to a set (A), we write 𝑥∈𝐴. If an element does not belong to a set, we write 𝑥∉𝐴
@@ -16,6 +16,7 @@
 #4 What is a subset?
 - A set (B) is a subset of a set (A) if all elements in (B) are also in (A). This is written as 𝐵⊆𝐴.
 - If (A) contains more elements than (B), then we call (B) a proper subset, which is written as 𝐵⊂𝐴.
+the direction of the symbol is important of how we read the notation.
 .
 #5 What is cardinality?
 - The cardinality of a set is the number of elements in the set. If A = {1,2,5}, then the cardinality is |A| = 3
@@ -61,3 +62,13 @@
 #17 What does 𝐴=B mean?
 - If two sets A=B are equal, i.e A=B, it means that they contain exactly the same elements.
 
+
+EXERCISES
+#1
+
+
+
+
+--- ARITHMETIC ---
+
+--- QUADRATIC EQUATIONS ---
