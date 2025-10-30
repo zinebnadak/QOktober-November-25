@@ -1,3 +1,17 @@
+#Okey Zineb habibty
+#Okey
+#Remember how to open doc using safari habibty this will be your routine:
+- either use Pycharm (current method), and press on the little browse icons that show up.
+or
+1. create a folder locally on disk, finder - home folder () - create new folder
+2. (if the html contains a gif or picture place this in the same folder as the html code)
+3. create the HTML file and save in the folder (and if you have gif/pic make sure to reference to it in your file)
+4. to test the html locally use a webserver, or in Mac terminal test with this command:
+- navigate to folder first: cd /path/to/www.tricell.local
+- start a simple lokal server using Python: python3 -m http.server
+(this will start a server at http://localhost:8000 where you can open your index.html)
+5. Open the webserver, ex. Google Chrome, and go to http://localhost:8000/index.html
+
 # Introduction to HTML (Hypertext Markup Language) for a deeper dive into UI
 # use sublime for mac as editor (for windows use notepad as editor)
 
@@ -68,40 +82,12 @@ In HTML, block-level elements (like <div>, <p>, <h1> to <h6>, etc.) can contain 
 <p> is a block element containing an inline element <strong>.
 <strong> makes the text inside it bold.
 
-#6 HTML BASIC DOCUMENT STRUCTURE
-<html>          - html alltid första elementet allt annat än innehåll placeras här
-    <head>      - html-sida har alltid ett head element där sidans metadata, css och javascript-kod placeras
-    </head>
-    <body>      - html-sida har alltid ett <body> element där 99% av sidans synliga innehåll placeras
-    </body>
-</html>
 
-
-OR
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Zineb's Webpage</title>
-    </head>
-    <body>
-        <div>
-            <h1>Welcome to Zineb's Webpage</h1>
-        </div>
-
-        <div>
-            <img src="logo.gif" alt="Website Logo">
-        </div>
-    </body>
-</html>
-
-#7 What is meta data?
+#6 What is meta data?
 Metadata refers to data about data.
 In the context of web development, meta tags in HTML are used to provide information about a webpage to browsers, search engines, and other external systems.
 
-#8 What does "gif" stand for?
+#7 What does "gif" stand for?
 GIF stands for Graphics Interchange Format. It is a bitmap image format that supports both static and animated images
 
 
