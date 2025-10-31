@@ -1,16 +1,69 @@
 #Okey Zineb habibty
 #Okey
-#Remember how to open doc using safari habibty this will be your routine:
-- either use Pycharm (current method), and press on the little browse icons that show up.
-or
-1. create a folder locally on disk, finder - home folder () - create new folder
-2. (if the html contains a gif or picture place this in the same folder as the html code)
-3. create the HTML file and save in the folder (and if you have gif/pic make sure to reference to it in your file)
-4. to test the html locally use a webserver, or in Mac terminal test with this command:
-- navigate to folder first: cd /path/to/www.tricell.local
-- start a simple lokal server using Python: python3 -m http.server
-(this will start a server at http://localhost:8000 where you can open your index.html)
-5. Open the webserver, ex. Google Chrome, and go to http://localhost:8000/index.html
+#Remember how to open and test your .html file (that you’ve written in PyCharm) this will be your routine:
+
+
+
+#Method 1
+Using PyCharm to Open the HTML File
+If you’re using PyCharm and have an HTML file ready, here’s how to open it directly from the IDE:
+1. Locate the file in PyCharm:
+    * In PyCharm, open the project where you’ve written your .html file.
+    * In the "Project" pane on the left, navigate to the folder that contains your HTML file.
+2. Open the HTML file:
+    * Double-click on the .html file to open it in the editor.
+3. Preview the HTML file:
+    * If you have the "Web Browser" tool enabled (usually in the lower-right corner or toolbar):
+        * You might see a little icon (like a browser) to the right of the editor. Clicking that should open your HTML file in the default web browser directly.
+        * This works for testing basic static files like HTML, CSS, and images.
+
+
+
+#Method 2
+Opening HTML Locally on Your Computer with Python's Built-In Web Server
+This method involves creating a folder to store your HTML and any other assets (like images or gifs), then testing it locally via a Python web server. Here’s a detailed guide:
+
+Step 1: Create a Folder Locally
+1. Open Finder on your Mac.
+2. Navigate to your Home folder (or any folder where you want to store your project).
+3. Create a New Folder:
+    * Right-click or use the "New Folder" option, and name it something relevant like html_test_project.
+
+Step 2: Add HTML File and Other Assets
+1. Place your .html file inside this newly created folder.
+2. If you have any images (like gifs or pictures), make sure you place them in the same folder as your .html file.
+    * For example, if you have an image called myimage.gif, make sure it’s in the same folder as your index.html.
+3. Update the HTML to reference the image correctly:
+    * In your HTML file, make sure the image or gif is referenced correctly, like this:
+img src="myimage.gif" alt="Description of the image"  
+
+Step 3: Open the Terminal and Navigate to Your Folder
+1. Open Terminal on your Mac.
+2. Navigate to your folder by using the cd command:
+cd /path/to/html_test_project  - Replace /path/to/html_test_project with the actual path to your folder. For example, if you put it in your home folder, it might look like:  cd ~/html_test_project  
+
+Step 4: Start a Local Web Server Using Python
+1. Run the Python web server:
+    * Once inside the folder with your HTML and image files, run the following command:
+
+python3 -m http.server  
+    * This starts a simple HTTP server on your computer. By default, it listens on port 8000.
+1. Server will start and should show output similar to this:  Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000) ...  
+
+Step 5: Open the HTML File in a Browser
+1. Open your web browser (e.g., Google Chrome, Safari, etc.).
+2. Go to the URL:
+    * Type the following in the address bar:  http://localhost:8000/index.html 
+        * Make sure you use the correct file name if your file is named differently (like home.html or my_page.html).
+    * You should now be able to see your HTML file rendered in the browser!
+
+Troubleshooting Tips
+* Images Not Showing: If your images or gifs are not displaying, make sure the paths are correct in your HTML file (i.e., they should be relative paths like src="myimage.gif" if both files are in the same folder).
+* Port Conflict: If port 8000 is already in use, you can specify a different port by running:  python3 -m http.server 8080  Then visit http://localhost:8080 in your browser.
+
+
+
+
 
 # Introduction to HTML (Hypertext Markup Language) for a deeper dive into UI
 # use sublime for mac as editor (for windows use notepad as editor)
