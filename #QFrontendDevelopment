@@ -2,7 +2,8 @@
 #Okey
 #Remember how to open and test your .html file (that you’ve written in PyCharm) this will be your routine:
 
-
+--- 03 HTML ---
+# These two methods Or just copy the path by clicking on "project" on the left handside and then paste in web browser
 
 #Method 1
 Using PyCharm to Open the HTML File
@@ -16,7 +17,6 @@ If you’re using PyCharm and have an HTML file ready, here’s how to open it d
     * If you have the "Web Browser" tool enabled (usually in the lower-right corner or toolbar):
         * You might see a little icon (like a browser) to the right of the editor. Clicking that should open your HTML file in the default web browser directly.
         * This works for testing basic static files like HTML, CSS, and images.
-
 
 
 #Method 2
@@ -64,14 +64,15 @@ Troubleshooting Tips
 
 
 
-
 # Introduction to HTML (Hypertext Markup Language) for a deeper dive into UI
 # use sublime for mac as editor (for windows use notepad as editor)
-
+# It’s not a programming language — it’s a markup language, which means it’s used to structure content.
+# Think of HTML as “telling the browser what kind of content something is.”
 
 --- 03 HTML 1 ---
 
 #1 Briefly explain HTML 4, HTML 5 and XHTML!
+#
 # HTML 4.01 (released in 1999) was essentially a minor revision of HTML 4,and aimed to separate content from presentation, encouraging the use of CSS (Cascading Style Sheets) for styling instead of inline attributes. It introduced a more structured and semantic way of building web pages.
 # HTML5 introduced many new elements and features to support modern web applications, multimedia, and better performance on mobile devices. It also made the syntax cleaner and more flexible. HTML5 includes new semantic elements and better support for APIs, like audio, video, and geolocation.
 # XHTML was developed to combine HTML's ease of use with XML's strict syntax rules. It was intended to make HTML documents more reliable and consistent by enforcing a stricter syntax. XHTML must be well-formed XML, which means:
@@ -145,3 +146,46 @@ GIF stands for Graphics Interchange Format. It is a bitmap image format that sup
 
 
 --- 04 HTML 1 ---
+#8 10 most common tags
+
+<h1> or <h6>
+#Headings where h1 is the largest and h6 is the smallest
+
+<p>
+#used for blocks of text. Browsers add space before and after paragraphs automatically
+
+<a>
+# Anchor (link) — used to link to another webpage or a part of the same page. The href attribute defines the link’s destination.
+# <a href="https://google.com"> Visit Google</a>
+
+<img>
+# Image — displays an image on the page. The src attribute specifies the image file, and alt describes it (for accessibility and in case the image can’t load).
+# <img src="cat.jpg" alt="A cute cat"
+
+<ul>
+# Unordered list — creates a list with bullet points. Each item inside must use <li>.
+# <ul><li>Item</li></ul> → Displays a bulleted list with one item.
+
+<ol>
+# Ordered list — creates a numbered list. Each item inside must use <li>
+# <ol><li>First</li></ol> --> Displays a numbered list starting with “1.”
+
+<li>
+# List item — defines an item in either an ordered (<ol>) or unordered (<ul>) list.
+# <li>Item</li> → A single list entry.
+
+<div>
+# Block-level container — used to group larger sections of content (like paragraphs, headings, or images). Often styled with CSS.
+# <div>This is a block.</div> → A block section that starts on a new line.
+
+<span>
+# Inline container — used to group small pieces of text or elements within a line (e.g., to style or highlight them).
+# <span>Highlight this</span> → A short inline element you can style separately.
+
+<br>
+#Line break — forces text to move to a new line. It’s an empty tag (no closing tag)
+
+
+
+--- 05 HTML 1 ---
+no questions needed, only theory
