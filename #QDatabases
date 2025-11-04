@@ -382,3 +382,618 @@ Operational Database: A system used for managing day-to-day operations, optimize
 Answer: Sharding is a method of horizontal partitioning where data is distributed across multiple servers or nodes to improve performance and scalability.
 Each shard contains a subset of the data, and queries are directed to the appropriate shard.
 This allows for handling large amounts of data and high traffic loads by distributing the workload.
+
+
+
+
+
+--- Relational algebra and calculus ---
+Q1: What are relational algebra and relational calculus?
+A1: They are formal languages associated with the relational model in databases.
+
+Procedural means you specify how to do something
+Non-procedural (or declarative) means you specify what you want, not how to get it.
+
+Q2: Is relational algebra procedural or non-procedural?
+A2: Relational algebra is a procedural language — it specifies how a query is carried out.
+
+Q3: Is relational calculus procedural or non-procedural?
+A3: Relational calculus is non-procedural — it specifies what data to retrieve, not how.
+
+Q4: Are relational algebra and relational calculus equivalent?
+A4: Yes, formally they are equivalent in expressive power.
+
+Q5: What does it mean if a language is relationally complete?
+A5: It means the language can produce any relation that can be derived using relational algebra or calculus.
+
+Q6: What kind of foundation do relational algebra and calculus have?
+A6: They have a rigorous mathematical foundation.
+
+Q7: What are relational algebra and calculus used for?
+A7: They are used for reasoning, query optimization, and understanding the theoretical basis of database queries.
+Query optimization means finding the most efficient way to execute a database query — that is, how to get the same correct result while using the least time, memory, or other resources.
+
+Q8: How is SQL related to relational algebra?
+A8: Relational Algebra provides the theoretical foundation for how data is manipulated in relational databases.
+SQL (Structured Query Language) is a practical implementation of those ideas. every SQL query can be represented as a sequence of relational algebra operations (like SELECT, PROJECT, JOIN, etc.).
+But SQL is more powerful — it’s a superset of relational algebra because it also includes:
+- Aggregate functions (e.g., COUNT, AVG, SUM)
+- Grouping and ordering
+- String and date operations
+- Formatting and output control
+
+Q9: How does SQL compare to relational algebra in terms of semantics and syntax?
+A9: SQL has more complicated semantics but simpler syntax, closer to natural language.
+Semantics — how the language behaves or what it means
+Syntax — how the language looks (the structure or form)
+
+Q10: What does relational algebra operate on?
+A10: It operates on one or more relations (tables) to define a new relation without changing the originals.
+
+Q11: Can the output of one relational algebra operation be used as input for another?
+A11: Yes — both operands and results are relations, so operations can be nested, like arithmetic expressions.
+
+Q12: What are the five basic operations in relational algebra?
+A12:
+- Selection
+- Projection
+- Cartesian Product
+- Union
+- Set Difference
+
+Q13: What additional operations can also be expressed using the five basic ones?
+A13: Join, Intersection, and Division.
+
+Q14: Which two operations are examined first in relational algebra?
+A14: Selection and Projection.
+
+Q15: What does the Selection (σ) operation do?
+A15: It selects rows (tuples) from a relation that satisfy a specific condition (predicate).
+
+Q16: What is the Greek symbol used for Selection?
+A16: The lowercase sigma (σ).
+
+Q17: What does the Projection (π) operation do?
+A17: It selects specific columns (attributes) from a relation and removes duplicates.
+
+Q18: What is the Greek symbol used for Projection?
+A18: The uppercase pi (π).
+
+Q19: Are Selection and Projection unary or binary operations?
+A19: They are unary operations — they work on a single relation.
+
+Q20: What is the difference between unary and binary operations in relational algebra?
+A20: Unary operations (like Selection and Projection) work on one relation.
+Binary operations work on pairs of relations (e.g., Union, Cartesian Product).
+
+Q21: What does σ_salary > 2900(Staff) mean?
+A21: It lists all staff whose salary is greater than 2900 — a Selection operation.
+
+Q22: What does π_staffNo, fName, lName, salary(Staff) mean?
+A22: It produces a list showing only those four columns for all staff — a Projection operation.
+
+Q23: What happens when you combine Projection and Selection?
+A23: You can filter rows first (Selection) and then choose specific columns (Projection).
+
+Q24: What is the relational calculus expression corresponding to that combined query?
+A24:
+{ s.staffNo, s.fName, s.lName, s.salary | Staff(s) ∧ s.salary > 2400 }
+This means:
+“Select staff numbers, first and last names, and salary from all tuples in Staff where the salary is greater than 2400.”
+
+
+--- Basic SQL --- SELECT, FROM, WHERE, ORDER BY
+Q1. What does SQL stand for?
+A1. SQL stands for Structured Query Language.
+
+Q2. What are the two main components of SQL?
+A2.DDL (Data Definition Language) – defines the database structure.
+DML (Data Manipulation Language) – retrieves and updates data.
+
+Q3. Why is SQL considered easy to learn?
+A3. Because SQL is declarative: you specify what information you need, not how to get it.
+
+Q4. Is SQL a standardized language?
+A4. Yes, it is standardized by ISO and is both the formal and de facto standard language for relational databases.
+
+Q5. Who defined the first version of SQL and when?
+A5. D. Chamberlin at IBM San Jose Laboratory defined it in 1974 as SEQUEL (Structured English Query Language).
+
+Q6. Why was the name changed from SEQUEL to SQL?
+A6. For legal reasons.
+
+Q7. When did the first commercial RDBMS based on SQL appear, and what was it called?
+A7. In the late 1970s, ORACLE appeared as probably the first commercial RDBMS based on SQL.
+
+Q8. When did ANSI and ISO publish the initial SQL standard?
+A8. In 1987.
+
+Q9. What were some later SQL versions and their release years?
+A9.SQL2 or SQL/92 (1992)
+SQL3 (1999, added object-oriented features)
+Later revisions: 2003, 2006, 2008, 2011, 2016, 2023.
+
+Q10. What notation is used to describe SQL syntax?
+A10. Extended BNF (Backus Naur Form) notation.
+
+Q11. What do uppercase and lowercase letters represent in SQL syntax notation?
+A11. Uppercase: reserved SQL keywords.
+Lowercase: user-defined words (like table or column names).
+
+Q12. What do the following symbols mean in SQL notation?
+A12. | → choice among alternatives
+{ } → required element
+[ ] → optional element
+... → optional repetition (0 or more times)
+
+Q13. What is the basic structure of the SELECT statement?
+A13. SELECT [DISTINCT | ALL] {* | [columnExpression [AS newName]] [,...]}
+FROM TableName [alias] [, ...]
+[WHERE condition]
+[GROUP BY columnList]
+[HAVING condition]
+[ORDER BY columnList];
+
+Q14. What does each clause in SELECT do?
+A14. SELECT: Chooses which columns to show.
+FROM: Specifies the table(s).
+WHERE: Filters rows.
+GROUP BY: Groups rows with the same value.
+HAVING: Filters groups.
+ORDER BY: Sets the order of results.
+Note: The order of these clauses cannot be changed.
+
+Q15. How do you list all details of all staff?
+A15. SELECT * FROM Staff;
+
+Q16. How do you show only staff number, first name, last name, and salary for all staff?
+A16. SELECT staffNo, fName, lName, salary FROM Staff;
+
+Q17. What is the purpose of DISTINCT in SQL?
+A17. It removes duplicate rows from the query result.
+Example: SELECT DISTINCT propertyNo FROM Viewing;
+
+Q18. How can you calculate and rename a column in SQL?
+A18. Using expressions and AS.
+Example: SELECT staffNo, fName, lName, salary*12 AS annualSalary FROM Staff;
+
+Q19. How do you find staff with a salary greater than 3500?
+A19. SELECT staffNo, fName, lName, position, salary
+FROM Staff
+WHERE salary > 3500;
+
+Q20. How do you list branch offices in London or Glasgow?
+A20. SELECT * FROM Branch WHERE city = 'London' OR city = 'Glasgow';
+
+Q21. What does the BETWEEN operator do?
+A21. It checks whether a value falls within a given range.
+Example: WHERE salary BETWEEN 5000 AND 6000;
+
+Q22. What is the negated version of BETWEEN?
+A22. NOT BETWEEN.
+
+Q23. How do you list all managers and supervisors?
+A23. SELECT staffNo, fName, lName, position
+FROM Staff
+WHERE position IN ('Manager', 'Supervisor');
+
+Q24. What is the negated version of IN?
+A24. NOT IN
+
+Q25. What symbols are used for pattern matching in SQL?
+A25. % → zero or more characters
+_ → any single character
+
+Q26. What keyword activates pattern matching?
+A26. LIKE
+
+Q27. Example: How to find all owners with “Glasgow” in their address?
+A27. SELECT ownerNo, fName, lName, address, telNo
+FROM PrivateOwner
+WHERE address LIKE '%Glasgow%';
+
+Q28. How do you test for NULL values in SQL?
+A28. Using IS NULL.
+Example: WHERE comment IS NULL;
+
+Q29. What is the opposite of IS NULL?
+A29. IS NOT NULL.
+
+Q30. How do you list all staff salaries in descending order?
+A30. SELECT staffNo, fName, lName, salary
+FROM Staff
+ORDER BY salary DESC;
+
+Q31. What keyword gives ascending order?
+A31. ASC (default)
+
+Q32. How do you order properties first by type (ascending) and then by rent (descending)?
+A32. SELECT propertyNo, type, rooms, rent
+FROM PropertyForRent
+ORDER BY type ASC, rent DESC;
+
+Q33. What is a collation in SQL?
+A33. A collation defines how strings are compared and ordered.
+
+Q34. What can you control with COLLATE?
+A34. Case sensitivity and language-specific sorting rules.
+
+Q35. Example of using COLLATE:
+A35. ORDER BY someStringColumn COLLATE latin1_general_cs;
+
+Q36. What must match the table’s character set when using COLLATE?
+A36. The collation must match the table’s character set (e.g., utf8 or latin1).
+
+
+--- Basic SQL --- COUNT, MIN, MAX, SUM, AVG (aggerate functions)
+Q1. What does an aggregate function do in SQL?
+A1. It operates on a single column of a table and returns a single value that summarizes the data in that column.
+
+Q2. How many aggregate functions are defined by the ISO SQL standard?
+A2. Five.
+
+Q3. What are the five aggregate functions defined by the ISO SQL standard?
+A3.COUNT – returns the number of values in a column.
+SUM – returns the sum of values in a column.
+AVG – returns the average of values in a column.
+MIN – returns the smallest value in a column.
+MAX – returns the largest value in a column.
+
+Q4. Which aggregate functions can be used with both numeric and non-numeric fields?
+A4. COUNT, MIN, and MAX.
+
+Q5. Which aggregate functions can only be used with numeric fields?
+A5. SUM and AVG.
+
+Q6. What does COUNT(*) do?
+A6. It counts all rows in a table, including those with NULL or duplicate values.
+
+Q7. How do other aggregate functions handle NULL values?
+A7. Except for COUNT(*), all aggregate functions ignore NULL values and operate only on the remaining non-null data.
+
+Q8. How can you eliminate duplicates before applying an aggregate function?
+A8. Use the keyword DISTINCT before the column name (e.g., COUNT(DISTINCT columnName)).
+
+Q9. In which SQL clauses can aggregate functions be used?
+A9. Only in the SELECT list and the HAVING clause.
+
+Q10. Can aggregate functions be used in the WHERE clause?
+A10. No, they cannot be used in the WHERE clause.
+
+Q11. What restriction applies when using aggregate functions in a SELECT statement without a GROUP BY clause?
+A11. The SELECT list should not include any columns that are not inside an aggregate function.
+
+Q12. Give an example of an illegal query according to the SQL standard.
+A12. SELECT staffNo, fName, lName, MAX(salary) FROM Staff;
+
+Q13. How do you count how many properties cost less than 800 per month to rent?
+A13. SELECT COUNT(*) AS count
+FROM PropertyForRent
+WHERE rent < 800;
+
+Q14. How do you count how many of those properties have a designated staff member?
+A14. SELECT COUNT(staffNo) AS count
+FROM PropertyForRent
+WHERE rent < 800;
+
+Q15. How do you count the number of different properties viewed in May 2025?
+A15. SELECT COUNT(DISTINCT propertyNo) AS count
+FROM Viewing
+WHERE viewDate BETWEEN '2025-05-01' AND '2025-05-31';
+
+Q16. How can you find the number of managers and the total of their salaries?
+A16. SELECT COUNT(staffNo) AS count, SUM(salary) AS sum
+FROM Staff
+WHERE position = 'Manager';
+
+Q17. How do you find the minimum, maximum, and average staff salary?
+A17. SELECT MIN(salary) AS min,
+       MAX(salary) AS max,
+       AVG(salary) AS avg
+FROM Staff;
+
+Q18. What does each aggregate function return?
+A18.
+| Function | Description               | Works on Nulls                            | Works on Non-Numeric |
+| -------- | ------------------------- | ----------------------------------------- | -------------------- |
+| COUNT    | Number of values          | `COUNT(*)` includes nulls; others exclude | yes                   |
+| SUM      | Total of numeric values   | Excludes nulls                            | no                    |
+| AVG      | Average of numeric values | Excludes nulls                            | no                    |
+| MIN      | Smallest value            | Excludes nulls                            | yes                    |
+| MAX      | Largest value             | Excludes nulls                            | yes                    |
+
+
+--- Basic SQL --- GROUP BY, HAVING
+Q1. What is the purpose of the GROUP BY clause in SQL?
+A1. The GROUP BY clause is used to group rows that have the same values in specified columns so that aggregate functions (like COUNT, SUM, etc.) can be applied to each group.
+
+Q2. What does using GROUP BY help you obtain?
+A2. It helps you get subtotals — for example, the number of staff in each branch.
+
+Q3. In a query that includes both WHERE and GROUP BY, which one is applied first?
+A3. The WHERE clause is applied first to filter individual rows, then GROUP BY forms groups from the remaining rows.
+
+Q4. What does each group in a GROUP BY query represent?
+A4. Each group represents a summary row or a result group that aggregates data for that category.
+
+Q5. How can you find the number of staff in each branch and their total salaries?
+A5. SELECT branchNo,
+       COUNT(staffNo) AS count,
+       SUM(salary) AS sum
+FROM Staff
+GROUP BY branchNo
+ORDER BY branchNo;
+
+Q6. What does the above query do?
+A6. Groups the rows by branchNo.
+Counts how many staff (COUNT(staffNo)) are in each branch.
+Calculates the total salary (SUM(salary)) for each branch.
+Orders the results by branchNo.
+
+Q7. What is WITH ROLLUP used for in MySQL?
+A7. It is used to generate summary rows (also called “sum of sums”) that provide subtotals and grand totals for grouped data.
+
+Q8. Give an example of using WITH ROLLUP.
+A8. SELECT branchNo,
+       COUNT(staffNo) AS count,
+       SUM(salary) AS sum
+FROM Staff
+GROUP BY branchNo WITH ROLLUP;
+
+Q9. What does the WITH ROLLUP query add to the results?
+A9. It adds an extra row showing the overall total (the sum of all groups).
+
+Q10. What is the purpose of the HAVING clause?
+A10. The HAVING clause is used to restrict or filter groups after they have been formed by the GROUP BY clause.
+
+Q11. How is HAVING different from WHERE?
+A11. WHERE filters individual rows before grouping.
+HAVING filters groups after they are created.
+
+Q12. What must appear in a HAVING clause?
+A12. Column names used in the HAVING clause must either:
+Appear in the GROUP BY list, or
+Be contained within an aggregate function.
+
+Q13. How can you find the number of staff in each branch and their total salaries, but only for branches with more than one staff member?
+A13.
+SELECT branchNo,
+       COUNT(staffNo) AS count,
+       SUM(salary) AS sum
+FROM Staff
+GROUP BY branchNo
+HAVING COUNT(staffNo) > 1
+ORDER BY branchNo;
+
+Q14. What does this query do?
+A14.
+Groups staff by branchNo.
+Calculates each branch’s staff count and total salary.
+Displays only those branches where the number of staff is greater than one.
+Orders the final result by branchNo.
+
+Summary of Key Points
+| Concept         | Description                                             | Example or Note                 |
+| --------------- | ------------------------------------------------------- | ------------------------------- |
+| **GROUP BY**    | Groups rows with the same value for one or more columns | `GROUP BY branchNo`             |
+| **WHERE**       | Filters individual rows before grouping                 | Must appear before `GROUP BY`   |
+| **HAVING**      | Filters groups after grouping                           | `HAVING COUNT(staffNo) > 1`     |
+| **WITH ROLLUP** | Adds summary rows for subtotals and totals (MySQL only) | `GROUP BY branchNo WITH ROLLUP` |
+
+
+--- Subqueries ---
+
+Q1: What is a subquery?
+A1: A subquery is a nested or embedded SELECT statement inside another SQL query.
+
+Q2: Where can a subquery be used in an SQL statement?
+A2: A subquery can be used in the SELECT, FROM, WHERE, and HAVING clauses of an outer SELECT statement.
+
+Q3: What are two example uses of subqueries?
+A3:Constructing a query that uses data from two tables by utilizing foreign keys.
+Constructing a query that uses an aggregate function in the WHERE clause.
+
+Q4: What does Example 6.19 demonstrate?
+A4: It shows how to use a subquery in the WHERE clause.
+
+Q5: What is the goal of Example 6.19?
+A5: To list staff who work in the branch at ‘163 Main St’ without hardcoding a specific branch number.
+
+Q6: What is the SQL query in Example 6.19?
+A6: SELECT staffNo, fName, lName, position
+FROM Staff
+WHERE branchNo =
+   (SELECT branchNo
+    FROM Branch
+    WHERE street = '163 Main St');
+
+Q7: What does Example 6.20 demonstrate?
+A7: It demonstrates subqueries in both the WHERE and SELECT clauses.
+
+Q8: What is the goal of Example 6.20?
+A8: To list all staff whose salary is greater than the average salary and show how much more they earn than the average.
+
+Q9: What is the SQL query in Example 6.20?
+A9: SELECT staffNo, fName, lName, position,
+       salary - (SELECT AVG(salary) FROM Staff) AS salaryDiff
+FROM Staff
+WHERE salary >
+      (SELECT AVG(salary) FROM Staff);
+
+Q10: What does Example 6.21 demonstrate?
+A10: It demonstrates a doubly nested subquery using the IN operator.
+
+Q11: What is the purpose of Example 6.21?
+A11: To list properties handled by staff who work at ‘163 Main St’.
+
+Q12: What is the SQL query in Example 6.21?
+A12: SELECT propertyNo, street, city, postcode, type, rooms, rent
+FROM PropertyForRent
+WHERE staffNo IN
+   (SELECT staffNo FROM Staff
+    WHERE branchNo =
+       (SELECT branchNo
+        FROM Branch
+        WHERE street = '163 Main St'));
+
+Q13: What important note is mentioned about subqueries that return multiple rows?
+A13: When a subquery returns more than one row, you must use the IN operator.
+
+Q14: What does a subquery in the FROM clause create?
+A14: It creates a derived table, from which the outer SELECT can pull data.
+
+Q15: Why must a derived table be named?
+A15: Because every table must have a name, so the derived table must be given an alias using AS.
+
+Q16: What does the Example “Subquery in FROM” show?
+A16: It shows how to calculate the average total salary cost for a branch using a subquery in the FROM clause.
+
+Q17: What is the SQL query for the subquery in the FROM clause?
+A17: SELECT AVG(sumColumn) AS avgSalaryCost
+FROM (SELECT SUM(salary) AS sumColumn
+      FROM Staff
+      GROUP BY branchNo) AS sumTable;
+
+Q18: Why can’t you write AVG(SUM(salary)) directly?
+A18: Because aggregate functions cannot be nested directly. You must use a subquery to perform one aggregation first.
+
+Q19: What is sumColumn in the above query?
+A19: It is the alias for the inner query’s result (the sum of salaries per branch).
+
+Q20: What is sumTable in the above query?
+A20: It is the alias for the derived table created by the inner subquery.
+
+--- ANY and ALL ---
+Q1: What are the SQL keywords ANY and ALL used with?
+A1: They are used with subqueries that produce a single column of numbers.
+
+Q2: When using ALL, when will a condition be true?
+A2: The condition will be true only if it is satisfied by all values produced by the subquery.
+
+Q3: When using ANY, when will a condition be true?
+A3: The condition will be true if it is satisfied by any one of the values produced by the subquery.
+
+Q4: What happens if the subquery used with ANY or ALL is empty?
+A4: With ALL, the condition returns true.
+With ANY, the condition returns false.
+
+Q5: What does Example 6.22 demonstrate?
+A5: It shows how to use ANY with a subquery to compare salaries.
+
+Q6: What is the goal of Example 6.22?
+A6: To find staff whose salary is larger than the salary of at least one staff member at branch B003.
+
+Q7: What is the SQL query from Example 6.22?
+A7: SELECT staffNo, fName, lName, position, salary
+FROM Staff
+WHERE salary > ANY(SELECT salary
+                   FROM Staff
+                   WHERE branchNo = 'B003');
+
+Q8: What values does the inner query in Example 6.22 produce?
+A8: The inner query produces the set {4200, 3000, 5500}.
+
+Q9: What does the outer query select based on that set?
+A9: It selects staff whose salaries are greater than any of the values in that set.
+
+Q10: What is the output of Example 6.22?
+A10:
+| staffNo | fName | lName | position   | salary |
+| ------- | ----- | ----- | ---------- | ------ |
+| SG14    | David | Ford  | Supervisor | 4200   |
+| SG5     | Susan | Brand | Manager    | 5500   |
+| SL21    | John  | White | Manager    | 5300   |
+
+Using MIN Instead of ANY
+Q11: What can be used instead of ANY in Example 6.22?
+A11: You can use the MIN function instead of ANY.
+
+Q12: How are the two equivalent queries written?
+A12:
+Using ANY:
+SELECT staffNo, lName, salary, branchNo
+FROM Staff
+WHERE salary > ANY (SELECT salary
+                    FROM Staff
+                    WHERE branchNo = 'B003');
+Equivalent using MIN:
+SELECT staffNo, lName, salary, branchNo
+FROM Staff
+WHERE salary > (SELECT MIN(salary)
+                FROM Staff
+                WHERE branchNo = 'B003');
+
+Use of ALL
+Q13: What does Example 6.23 demonstrate?
+A13: It shows how to use ALL with a subquery to compare values.
+
+Q14: What is the goal of Example 6.23?
+A14: To find staff whose salary is equal to or larger than every staff member at branch B005.
+
+Q15: What is the SQL query from Example 6.23?
+A15: SELECT staffNo, fName, lName, position, salary
+FROM Staff
+WHERE salary >= ALL(SELECT salary
+                    FROM Staff
+                    WHERE branchNo = 'B003');
+
+Q16: What is the output of Example 6.23?
+A16:
+| staffNo | fName | lName | position | salary |
+| ------- | ----- | ----- | -------- | ------ |
+| SG5     | Susan | Brand | Manager  | 5500   |
+
+Using MAX Instead of ALL
+Q17: What can be used instead of ALL in Example 6.23?
+A17: The MAX function can be used instead of ALL.
+
+Q18: How are the two equivalent queries written?
+A18:
+Using ALL:
+SELECT staffNo, lName, salary, branchNo
+FROM Staff
+WHERE salary >= ALL (SELECT salary
+                     FROM Staff
+                     WHERE branchNo = 'B003');
+Equivalent using MAX:
+SELECT staffNo, lName, salary, branchNo
+FROM Staff
+WHERE salary >= (SELECT MAX(salary)
+                 FROM Staff
+                 WHERE branchNo = 'B003');
+
+Table Aliases in Subqueries
+Q19: What is the purpose of using table aliases in subqueries?
+A19: Aliases help differentiate between the inner and outer tables when the same table is used in both queries.
+
+Q20: What is the goal of the table alias example?
+A20: To list the highest-paid staff member at each branch.
+
+Q21: What is the SQL query for listing the highest-paid staff at each branch?
+A21:
+SELECT staffNo, lName, salary, branchNo
+FROM Staff s1
+WHERE salary >= ALL (SELECT salary
+                     FROM Staff s2
+                     WHERE s1.branchNo = s2.branchNo);
+
+Q22: What is the output of the table alias example?
+A22:
+| staffNo | lName | salary | branchNo |
+| ------- | ----- | ------ | -------- |
+| SA9     | Howe  | 2800   | B007     |
+| SG5     | Brand | 5500   | B003     |
+| SL21    | White | 5300   | B005     |
+
+
+
+
+
+
+
+
+
+
+
+
+
