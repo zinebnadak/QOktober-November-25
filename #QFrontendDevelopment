@@ -3,7 +3,8 @@
 #Remember how to open and test your .html file (that you’ve written in PyCharm) this will be your routine:
 
 --- 03 HTML ---
-# These two methods Or just copy the path by clicking on "project" on the left handside and then paste in web browser
+# These two methods
+# Or just copy the path by clicking on "project" on the left handside and then paste in web browser
 
 #Method 1
 Using PyCharm to Open the HTML File
@@ -63,7 +64,6 @@ Troubleshooting Tips
 
 
 
-
 # Introduction to HTML (Hypertext Markup Language) for a deeper dive into UI
 # use sublime for mac as editor (for windows use notepad as editor)
 # It’s not a programming language — it’s a markup language, which means it’s used to structure content.
@@ -72,7 +72,6 @@ Troubleshooting Tips
 --- 03 HTML 1 ---
 
 #1 Briefly explain HTML 4, HTML 5 and XHTML!
-#
 # HTML 4.01 (released in 1999) was essentially a minor revision of HTML 4,and aimed to separate content from presentation, encouraging the use of CSS (Cascading Style Sheets) for styling instead of inline attributes. It introduced a more structured and semantic way of building web pages.
 # HTML5 introduced many new elements and features to support modern web applications, multimedia, and better performance on mobile devices. It also made the syntax cleaner and more flexible. HTML5 includes new semantic elements and better support for APIs, like audio, video, and geolocation.
 # XHTML was developed to combine HTML's ease of use with XML's strict syntax rules. It was intended to make HTML documents more reliable and consistent by enforcing a stricter syntax. XHTML must be well-formed XML, which means:
@@ -86,7 +85,7 @@ Troubleshooting Tips
 
 # An HTML element is a complete structure used to define content on a webpage. It consists of an opening tag, content (optional), and a closing tag. The element tells the browser what kind of content it is displaying and how to structure it.
 Basic Structure of an Element:
-<tagname>Content goes here</tagname>
+<tagname> Content goes here </tagname>
 
 examples of different elements:
 <p> is an element that defines a paragraph of text.
@@ -107,13 +106,12 @@ Attributes provide additional information about an element, such as styles, clas
 <h1> to <h6>: Heading tags. <h1> is the most important and largest, <h6> is the smallest.
 <p>: Represents a paragraph.
 <a>: Anchor tag, used to create hyperlinks.
-<img>: Displays an image.
+<img>: element is used to display images on a webpage.
 <ul>: Unordered list.
 <ol>: Ordered list (with numbered items).
 <table>: Creates a table.
 <div>: A generic container used for grouping content (used with CSS for layout)
 <span>: A generic inline container used to style part of a text or other content.
-<img> element is used to display images on a webpage.
 <br> element is used to insert a line break, which means it moves content to the next line, similar to how pressing Enter works in a text editor.
 
 #4 explain the structure of nested elements in HTML
@@ -185,6 +183,152 @@ GIF stands for Graphics Interchange Format. It is a bitmap image format that sup
 <br>
 #Line break — forces text to move to a new line. It’s an empty tag (no closing tag)
 
+#9 What is the difference between <head> and <body> in HTML?
+<head> : element contains information about the page — not visible to users — like the title, metadata, links to stylesheets (CSS), and scripts (JavaScript).
+<body> : element contains what users actually see — like text, images, links, and buttons.
+
+#10 What does the <!DOCTYPE html> declaration do?
+Always use the line, and at the very top of your HTML file:
+It tells the browser that the file is an HTML5 document
+Without it the browser might use "quirks mode", which renders the page using outdated rules
+
+#11 What is the purpose of <meta> tags?
+They provide metadata (information about your webpage) that helps browsers and search engines understand your site.
+
+#12 What is the <title> tag used for?
+The text inside <title> appears:
+- In the browser tab
+- In search engine results
+- When you bookmark the page
+
+#13 What is the difference between <div> and <span>?
+- <div> is a block-level element — it takes up the whole width of the page.
+- <span> is an inline element — it only takes up as much space as its content.
+
+----------------> #14 Create a simple HTML file called practice.html that includes:
+- A title that says “Zineb’s Practice Page”
+- A heading that says “Welcome!”
+- A paragraph introducing yourself
+- An image
+- A link to your favorite website
+
+#15 What are text formatting tags in HTML?
+HTML provides several tags to format text, both visually (how the text looks on the page) and semantically (what the text means).
+| Tag        | Meaning                                          | Example                         |
+| ---------- | ------------------------------------------------ | ------------------------------- |
+| `<b>`      | Makes text **bold** (visual only)                | `<b>Bold text</b>`              |
+| `<strong>` | Emphasizes text as *important* (semantic + bold) | `<strong>Important!</strong>`   |
+| `<i>`      | Italic text (visual only)                        | `<i>Italic text</i>`            |
+| `<em>`     | Emphasized text as *important* (semantic + italic)              | `<em>Really!</em>`              |
+| `<u>`      | Underlines text                                  | `<u>Underlined text</u>`        |
+| `<small>`  | Makes text smaller                               | `<small>Small text</small>`     |
+| `<mark>`   | Highlights text                                  | `<mark>Highlighted text</mark>` |
+
+#16 What is the difference between <b> and <strong> (and between <i> and <em>)?
+<b> and <i> are styling tags (visual emphasis).
+<strong> and <em> carry semantic meaning, telling browsers and screen readers that the text is important or stressed.
+
+#17 How do you create a hyperlink?
+Use the <a> (anchor) tag with the href attribute to specify the link’s destination.
+<a href="https://www.google.com">Visit Google</a>
+
+#18 How do you link to another page in the same project?
+You can use relative paths.
+In index.html: <a href="about.html">Go to About Page</a>
+
+#19 how to switch to a new line in HTML?
+Pressing Enter in HTML code does not guarantee a new line in the browser.
+Use <br> for line breaks or block-level elements for larger sections of text.
+
+The <br> tag goes exactly where you want the line to break.
+Usually, it is placed at the end of the line that should end, before the text that should start on a new line.
+It should not be at the very beginning of a block (unless you want the first line to start with a blank line).
+
+#20 How do you create an email link?
+Use the mailto: protocol inside the href (Hypertext REFerence.)
+“mail to”, meaning: “Send an email to this address.”
+
+#21 How do you create a list in HTML?
+There are two main types:
+Unordered list (<ul>) — bullet points
+Ordered list (<ol>) — numbered
+
+<ul>
+  <li>Apples</li>
+  <li>Bananas</li>
+</ul>
+
+<ol>
+  <li>First</li>
+  <li>Second</li>
+</ol>
+
+#22 What are nested lists?
+Lists can be placed inside other lists.
+<ul>
+  <li>Fruits
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+    </ul>
+  </li>
+  <li>Vegetables</li>
+</ul>
+
+#23 How do you create a line break and a horizontal line?
+<br> = Line break (moves text to a new line)
+<hr> = Horizontal rule (draws a line across the page)
+
+#24 How do you add an image?
+<img src="cat.jpg" alt="An image of a cute cat">
+
+Required: Specifies the path to the image.
+
+Can be:
+Relative path (image in same folder): "cat.jpg"
+Relative path in another folder: "images/cat.jpg"
+Absolute URL: "https://example.com/cat.jpg"
+
+#25 Difference between links
+You need the direct URL of the image, which usually ends with an image file extension like .jpg, .png, or .gif
+
+| Alternativ         | Vad kopieras             | Exempel                             |
+| ------------------ | ------------------------ | ----------------------------------- |
+| Kopiera länkadress | URL som länken pekar på  | `https://www.example.com/page.html` |
+| Kopiera ren länk   | Texten som syns på sidan | `Besök sidan`                       |
+
+Why your image doesn’t appear
+Your src is not a direct image URL.
+You copied the Google search link or the “image preview” URL, not the actual image file.
+This URL doesn’t point directly to the image file, it points to a Google redirect page.
+Browsers can’t display it as an image, so they fallback to showing the alt text: "An image of a cute cat".
+
+Get the link:
+The original image is hosted on... at: https://pethelpful.com/cats/top-10-cutest-cat-photos-of-all-time
+To get the direct image URL, I did this:
+Right-click on the image → “Open image in new tab” (or “Copy image address” depending on browser).
+This gave the exact URL pointing to the image file, which ends in .jpg.
+
+
+# when you use a full-size image from a website, it often loads at its original resolution, which can be huge. In your case, it’s something like 5200×3470 pixels! 😅
+Make it smaller by width and height attributes
+<img src="https://pethelpful.com/.image/c_fill,g_faces:center/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg"
+     alt="An image of a cute cat"
+     width="600">
+
+
+
+----------------> #26 Create a file named text_links_lists.html and include:
+A title: “Zineb’s Formatting Practice”
+A heading that says “Learning Text and Links”
+A paragraph using <b>, <i>, <em>, <mark>
+A link to your favorite site
+An unordered list of your 3 favorite foods
+A horizontal line
+A line that says “Thank you for visiting!”
+
+-----------------> #27 Challenge
+Add a second file named about.html, and from your main page, create a link that says “About Me” → when clicked, it should open about.html.
 
 
 --- 05 HTML 1 ---
