@@ -63,12 +63,426 @@ the direction of the symbol is important of how we read the notation.
 - If two sets A=B are equal, i.e A=B, it means that they contain exactly the same elements.
 
 
-EXERCISES
-#1
+-------------------------------------------> EXERCISES
 
 
 
+--- ARITHMETICS ---
+#1 What are the natural numbers (ℕ)?
+* The numbers used for counting: 0, 1, 2, 3, 4, …
 
---- ARITHMETIC ---
+#2 What are negative numbers?
+* Numbers less than zero, written with a minus sign (−1, −2, −3, …).
+
+#3 What are integers (ℤ)?
+* All natural and negative numbers together, including zero.
+
+#4 What are rational numbers (ℚ)?
+* Numbers that can be written as a fraction a/b, where a and b are integers and b ≠ 0.
+
+#5 What are irrational numbers?
+* Numbers that cannot be written as a fraction, like √2 or π.
+
+#6 What are real numbers (ℝ)?
+* All rational and irrational numbers together.
+
+#7 What is the correct order of operations?
+* Parentheses → Powers/Roots → Multiplication/Division → Addition/Subtraction.
+
+#8 What is the result of 5 + 7 ⋅ 2 according to the order of operations?
+* 5 + 14 = 19.
+
+#9 What is the opposite of +3 on the number line?
+* −3 (they are opposite numbers, same distance from zero).
+
+#10 What happens when you add a negative number?
+* You move left on the number line (it’s the same as subtraction).
+
+#11 What is the rule for subtracting a negative number?
+* a − (−b) = a + b.
+
+#12 What is the rule for multiplying two numbers with different signs?
+* The result is negative.
+
+#13 What is the rule for multiplying two negative numbers?
+* The result is positive.
+
+#14 What happens if you divide a positive by a negative number?
+* The result is negative.
+
+#15 What is a fraction?
+* A number written as a/b, where a is the numerator and b the denominator.
+
+#16 What does a fraction represent?
+* A division that is not yet calculated, or a part of a whole.
+
+#17 What does it mean to simplify (förkorta) a fraction?
+* Divide numerator and denominator by the same number.
+
+#18 What does it mean to extend (förlänga) a fraction?
+* Multiply numerator and denominator by the same number.
+
+#19 What is the smallest common denominator (MGN)?
+* The smallest number that both denominators can divide into evenly.
+
+#20 How do you add fractions with the same denominator?
+* Add the numerators and keep the denominator.
+
+#21 How do you add fractions with different denominators?
+* Make denominators the same (find MGN), then add numerators.
+
+#22 How do you multiply two fractions?
+* Multiply numerator × numerator and denominator × denominator.
+
+#23 How do you divide two fractions?
+* Multiply the first fraction by the reciprocal of the second.
+
+#24 What is a mixed number?
+* A number with a whole part and a fraction part, like 1¼.
+
+#25 How do you convert 1¼ to an improper fraction?
+* 1¼ = (1×4 + 1)/4 = 5/4.
+
+#26 What is a decimal number?
+* A number written with a comma (or dot) separating whole and fractional parts.
+
+#27 What does the place of a digit in a decimal tell you?
+* Its value (tenths, hundredths, thousandths, etc.).
+
+#28 What happens when you multiply a decimal by 10?
+* The decimal point moves one step to the right.
+
+#29 What happens when you divide a decimal by 10?
+* The decimal point moves one step to the left.
+
+#30 What is rounding?
+* Approximating a number to fewer decimal places.
+
+#31 What is the rule for rounding up?
+* If the next digit is 5 or higher, round up.
+
+#32 What are “gällande siffror” (significant figures)?
+* The digits that show the precision of a number.
+
+#33 What are the first five prime numbers?
+* 2, 3, 5, 7, 11.
+
+#34 What is a composite number?
+* A number made of two or more prime factors.
+
+#35 What is prime factorization?
+* Writing a number as a product of prime numbers, e.g. 12 = 2×2×3.
+
+#36 What is a ratio?
+* A comparison between two quantities, e.g. 1:4.
+
+#37 How is scale written on maps?
+* As a ratio, e.g. 1:10000 means 1 cm on the map = 10000 cm in reality.
+
+#38 What is a power (potens)?
+* A number multiplied by itself several times, written as base^exponent.
+
+#39 In 5⁴, what is the base and what is the exponent?
+* Base = 5, Exponent = 4.
+
+#40 What is 3²?
+* 9 (because 3×3 = 9).
+
+#41 What is the rule for multiplying powers with the same base?
+* Add the exponents: aˣ × aʸ = aˣ⁺ʸ.
+
+#42 What is the rule for dividing powers with the same base?
+* Subtract the exponents: aˣ ÷ aʸ = aˣ⁻ʸ.
+
+#43 What is (aˣ)ʸ equal to?
+* aˣʸ (multiply the exponents).
+
+#44 What does a⁻ˣ mean?
+* 1 divided by aˣ (the reciprocal).
+
+#45 What is a⁰ equal to (a ≠ 0)?
+* 1.
+
+#46 What is a square root?
+* The number that, when multiplied by itself, gives the original number.
+
+#47 What is √9?
+* 3.
+
+#48 What is a cube root (tredjerot)?
+* The number that, multiplied by itself three times, gives the original number.
+
+#49 What is the general form for roots?
+* ᵇ√a = a^(1/b).
+
+#50 What is an example of a fractional exponent?
+* 8^(1/3) = 2 (cube root of 8).
+
+#51 What is an estimate (överslagsräkning)?
+* A quick approximate calculation using rounded numbers.
+
+#52 When adding or subtracting for estimation, what should you round to?
+* The nearest ten, hundred, or appropriate place value.
+
+#53 Why is rounding important in real life?
+* To make calculations faster and easier when exact values aren’t needed.
+
+-------------------------------------------> EXERCISES
+
+
 
 --- QUADRATIC EQUATIONS ---
+ #1 What is a quadratic polynomial?
+* A polynomial of degree 2, written in the form ax² + bx + c, where a ≠ 0.
+
+#2 What determines the degree of a polynomial?
+* The term with the highest exponent of the variable.
+
+#3 Give an example of a quadratic polynomial.
+* Example: x² + 3x + 1, where a = 1, b = 3, and c = 1.
+
+#4 What is a quadratic function?
+* A function written as f(x) = ax² + bx + c, where a, b, and c are constants and a ≠ 0.
+
+#5 What is a quadratic equation?
+* An equation where one side is a quadratic polynomial and the other side equals zero, written as ax² + bx + c = 0.
+
+#6 What does it mean to “solve” a quadratic equation?
+* To find the value(s) of x that make the equation equal to zero.
+
+#7 What shape does the graph of a quadratic function form?
+* A parabola.
+
+#8 What happens if a > 0 in f(x) = ax² + bx + c?
+* The parabola opens upward and has a minimum point.
+
+#9 What happens if a < 0 in f(x) = ax² + bx + c?
+* The parabola opens downward and has a maximum point.
+
+#10 What is an extremum (extreme point)?
+* The highest or lowest point of a quadratic function — a maximum or minimum.
+
+#11 What is a “happy mouth” parabola?
+* A parabola with a > 0 (opens upward, has a minimum point).
+
+#12 What is a “sad mouth” parabola?
+* A parabola with a < 0 (opens downward, has a maximum point).
+
+#13 What are the zeros (roots) of a quadratic function?
+* The x-values where the function crosses the x-axis, i.e. where f(x) = 0.
+
+#14 What are the zeros of f(x) = x² + 3x − 4?
+* The function crosses the x-axis at x = −4 and x = 1.
+
+#15 How do you solve a quadratic equation graphically?
+* Draw the graph of the corresponding function and read off the x-values where it intersects the x-axis.
+
+#16 What are real solutions?
+* The x-values where the graph crosses the real x-axis.
+
+#17 When does a quadratic equation have two real solutions?
+* When the graph crosses the x-axis at two points.
+
+#18 When does it have one real solution?
+* When the graph touches the x-axis at one point (the vertex lies on the x-axis).
+
+#19 When does it have no real solution?
+* When the graph does not cross the x-axis at all.
+
+#20 What does it mean if a quadratic equation has no real roots?
+* There are no real x-values that make f(x) = 0 (the graph stays entirely above or below the x-axis).
+
+#21 What is the axis of symmetry of a quadratic function?
+* A vertical line that divides the parabola into two mirror-image halves.
+
+#22 Where does the vertex (extreme point) always lie?
+* On the axis of symmetry.
+
+#23 How can you find the equation of the axis of symmetry from the zeros?
+* By calculating the average of the two zeros: x = (x₁ + x₂)/2.
+
+#24 Example: For f(x) = x² + 3x − 4 with zeros at −4 and 1, what is the axis of symmetry?
+* x = (−4 + 1)/2 = −1.5.
+
+#25 What are the coordinates of the vertex of f(x) = x² + 3x − 4?
+* The vertex is at (−1.5, −6.25).
+
+#26 What is the general form of a quadratic equation?
+* ax² + bx + c = 0, where a ≠ 0.
+
+#27 What is a “simple” quadratic equation?
+* One that can be written as ax² + c = 0 (b = 0).
+
+#28 How do you solve a simple quadratic equation like 2x² − 50 = 0?
+* Move constants to one side: 2x² = 50 → x² = 25 → x = ±5.
+
+#29 What are the solutions to 2x² − 50 = 0?
+* x₁ = 5 and x₂ = −5.
+
+#30 What happens if you get a negative number under the square root when solving?
+* The equation has no real solutions.
+
+#31 Example: Does x² + 25 = 0 have real solutions?
+* No, because x² = −25 gives no real roots.
+
+#32 What is the special case where c = 0?
+* The equation has the form ax² + bx = 0, and can be solved by factoring.
+
+#33 What is factoring?
+* Writing an expression as a product of simpler factors, e.g. x² − 3x = x(x − 3).
+
+#34 What is the zero product property?
+* If a · b = 0, then either a = 0 or b = 0.
+
+#35 How do you solve x² − 3x = 0?
+* Factorize: x(x − 3) = 0 → x₁ = 0, x₂ = 3.
+
+#36 What is the general quadratic equation for the complete case?
+* ax² + bx + c = 0, where all constants a, b, and c ≠ 0.
+
+#37 What method is used to solve complete quadratic equations?
+* The completing the square method or the pq-formula.
+
+#38 What is the purpose of completing the square?
+* To rewrite the equation so one side becomes a perfect square, allowing us to take square roots easily.
+
+#39 What is the general simplified form for completing the square?
+* x² + px + q = 0.
+
+#40 What is the first step in completing the square?
+* Move the constant term to the right-hand side.
+
+#41 Example: Solve x² − 2x − 3 = 0 by completing the square.
+* x² − 2x = 3 → add 1 to both sides → (x − 1)² = 4 → x = 1 ± 2 → x₁ = 3, x₂ = −1.
+
+#42 Example: Solve x² + 4x − 5 = 0 by completing the square.
+* x² + 4x = 5 → add 4 to both sides → (x + 2)² = 9 → x = −2 ± 3 → x₁ = 1, x₂ = −5.
+
+#43 What is the pq-formula used for?
+* To solve quadratic equations of the form x² + px + q = 0.
+
+#44 What is the pq-formula?
+* x = −p/2 ± √((p/2)² − q).
+
+#45 What must you do before using the pq-formula?
+* Divide the entire equation by a so the coefficient of x² becomes 1.
+
+#46 Example: Solve 4x² + 32x + 28 = 0 using the pq-formula.
+* Divide by 4 → x² + 8x + 7 = 0 → p = 8, q = 7 → x = −4 ± √9 → x₁ = −1, x₂ = −7.
+
+#47 What is the expression under the square root in the pq-formula called?
+* The discriminant.
+
+#48 What does the discriminant show?
+* How many real solutions a quadratic equation has.
+
+#49 What happens if the discriminant is greater than 0?
+* Two real solutions.
+
+#50 What happens if the discriminant equals 0?
+* One real (double) solution.
+
+#51 What happens if the discriminant is less than 0?
+* No real solutions.
+
+#52 What is a root equation (square root equation)?
+* An equation where the variable appears under a square root sign.
+
+#53 Example of a root equation?
+* √(3x) = 9.
+
+#54 How do you solve a root equation?
+* Isolate the square root and then square both sides.
+
+#55 Solve √(3x) = 9.
+* 3x = 81 → x = 27.
+
+#56 What is a false root?
+* A solution that appears valid after squaring but does not satisfy the original equation.
+
+#57 How do you check for false roots?
+* Substitute each solution back into the original equation.
+
+#58 Example: Solve √(2 − x) = x.
+* Square both sides → 2 − x = x² → x² + x − 2 = 0 → Using pq: x = −½ ± √(¼ + 2) = −½ ± 1.5 → x₁ = 1, x₂ = −2. Check: only x = 1 is valid; x = −2 is a false root.
+
+#59 Why must you test all solutions in a root equation?
+* Because squaring both sides can introduce false roots that do not satisfy the original equation.
+
+#60 What should you always remember when solving quadratic or root equations?
+* Always simplify carefully, check for real roots, and verify your answers in the original equation.
+
+
+
+-------------------------------------------> EXERCISES
+
+
+
+--- LINEAR EQUATIONS ---
+#1 What is the general equation of a straight line?
+The general equation is 𝑦=𝑘𝑥+𝑚 where 𝑘 is the slope and 𝑚 is the y-intercept.
+
+#2 How do you calculate the slope 𝑘 of a line given two points?
+Use k=x2​−x1​y2​−y1​​ to find the slope.
+
+#3 How can you tell if two lines are parallel?
+Two lines are parallel if they have the same slope (k1 = k2).
+
+#4 How can you tell if two lines are perpendicular?
+Two lines are perpendicular if the product of their slopes is -1 (k1 * k2 = -1).
+
+#5 What does it mean if the slope k > 0, k = 0, or k < 0?
+k > 0 means the line rises, k = 0 means it is horizontal, and k < 0 means it falls.
+
+#6 Can a vertical line be written as y = kx + m?
+No. A vertical line is written as x = constant and is parallel to the y-axis.
+
+#7 What is a linear system of equations?
+It is a set of two or more linear equations that must be true at the same time.
+
+#8 How can you solve a linear system graphically?
+Draw the lines for each equation and find the intersection point, which is the solution.
+
+#9 How many solutions can a linear system have?
+One solution if lines intersect once, no solution if lines are parallel, infinite solutions if lines coincide.
+
+#10 What is the substitution method for solving a linear system?
+Solve one equation for one variable and substitute it into the other equation.
+
+#11 Solve this system using substitution: y = 2x + 4 and y = 3x + 2.
+Substituting gives 2x + 4 = 3x + 2 => x = 2, then y = 2*2 + 4 = 8.
+
+#12 What is the addition (elimination) method for solving a linear system?
+Add or subtract equations to eliminate one variable, possibly after multiplying an equation.
+
+#13 Solve the system y = 2x + 4 and y = 3x + 2 using addition.
+Multiply the second by -1, then add: y + (-y) = (2x + 4) + (-3x - 2) => x = 2, then y = 8.
+
+#14 Why might the graphical method not be exact?
+Because drawing or reading the graph may give an approximate solution, not the exact values.
+
+#15 When does a linear system have infinitely many solutions?
+When the lines coincide, meaning they have the same slope and y-intercept.
+
+#16 When does a linear system have no solution?
+When the lines are parallel and never intersect.
+
+#17 What is the intersection point of two lines?
+It is the point where the lines meet; its coordinates satisfy both equations.
+
+#18 How do you check if a solution of a system is correct?
+Substitute the solution into both equations and verify that both sides are equal.
+
+#19 Can any linear system be solved using either substitution or addition?
+Yes, both methods will give the same solution if it exists.
+
+#20 What should you always do first in the substitution method?
+Solve one equation for one variable before substituting it into the other equation.
+
+
+
+
+
+
+
+-------------------------------------------> EXERCISES
