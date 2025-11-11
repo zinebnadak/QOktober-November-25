@@ -116,6 +116,44 @@ Question: How is a unique key different from a primary key, and in what situatio
 * A primary key is the main identifier for records and cannot contain NULL values.
 * A unique key also enforces uniqueness but can allow NULL values (unless restricted). You would use a primary key for the column that uniquely identifies records, and a unique key to enforce uniqueness on other important attributes (like an email address or username).
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------
+--------------------------------- CONTINUE HERE!
+---------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 31. What are the three levels of the database architecture, and what does each level represent?
 Answer: The three-level database architecture consists of the following levels:
 External Level: This represents the user's view of the database. It describes the part of the database that is relevant to a specific user or group of users, focusing on how the data appears to them. Different users may have different views of the same data depending on their needs.
@@ -215,13 +253,6 @@ Operational Database: A system used for managing day-to-day operations, optimize
 Answer: Sharding is a method of horizontal partitioning where data is distributed across multiple servers or nodes to improve performance and scalability.
 Each shard contains a subset of the data, and queries are directed to the appropriate shard.
 This allows for handling large amounts of data and high traffic loads by distributing the workload.
-
-
-
-
----------------------------------
---------------------------------- CONTINUE HERE!
----------------------------------
 
 
 
