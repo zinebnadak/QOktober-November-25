@@ -481,8 +481,114 @@ Solve one equation for one variable before substituting it into the other equati
 
 
 
+-------------------------------------------> EXERCISES
 
 
+--- ABOUT FUNCTIONS ---
+#1 What is a function?
+A function is a rule that gives exactly one y-value for every x-value in its domain.
+
+#2 What is the domain and range of a function?
+The domain (Df) is the set of x-values we can use; the range (Vf) is the set of y-values the function produces.
+
+#3 How do you write the mapping between domain and range?
+It is written as f : Df → Vf.
+
+#4 What condition must hold for a relation to be a function?
+Each x in the domain must correspond to exactly one y in the range.
+
+#5 Is the curve x² + y² = 1 a function?
+No, because for some x-values there are two y-values — it fails the definition of a function.
+
+#6 What does f(x + 2) mean?
+It means you replace every x in the rule with (x + 2).
+
+#7 How do you find the domain of a rational function?
+Exclude all x-values that make the denominator zero.
+
+#8 What is an even function?
+A function is even if f(−x) = f(x) for all x in its domain.
+
+#9 What is an odd function?
+A function is odd if f(−x) = −f(x) for all x in its domain.
+
+#10 What kind of symmetry does an even function have?
+It is symmetric with respect to the y-axis.
+
+#11 What kind of symmetry does an odd function have?
+It is symmetric with respect to the origin.
+
+#12 What is a composite function?
+A composite function is formed when one function operates on another: (g ∘ f)(x) = g(f(x)).
+
+#13 How do you find the domain of a composite function?
+It includes all x for which f(x) is defined and f(x) lies within the domain of g.
+
+#14 Can f ∘ g and g ∘ f be the same?
+Not always — in most cases they give different results.
+
+#15 What does it mean for a function to be increasing or decreasing?
+Increasing means f(x₂) ≥ f(x₁) when x₂ > x₁; decreasing means f(x₂) ≤ f(x₁) when x₂ > x₁.
+
+#16 What does it mean if a function is strictly increasing?
+For any x₂ > x₁, we have f(x₂) > f(x₁).
+
+#17 What does it mean if a function is strictly decreasing?
+For any x₂ > x₁, we have f(x₂) < f(x₁).
+
+#18 What is a monotonic function?
+A function that is either entirely non-decreasing or non-increasing in an interval.
+
+#19 What is an injective function?
+A function is injective if different x-values give different y-values.
+
+#20 What is a surjective function?
+A function is surjective if every y in the codomain has at least one x that maps to it.
+
+#21 What is a bijective function?
+A function is bijective if it is both injective and surjective — every y corresponds to exactly one x.
+
+#22 What is the inverse of a function?
+It is a function that reverses the mapping: if f(x) = y, then f⁻¹(y) = x.
+
+#23 When does a function have an inverse?
+Only if it is bijective (one-to-one and onto).
+
+#24 How are the graphs of a function and its inverse related?
+They are mirror images of each other across the line y = x.
+
+#25 What is the general nth root of a number a?
+It is the number x that satisfies xⁿ = a, written as ⁿ√a or a^(1/n).
+
+#26 When does the equation xⁿ = a have real solutions?
+If n is even, only when a ≥ 0; if n is odd, for all real a.
+
+#27 What is the definition of a^(m/n)?
+It means the nth root of a raised to the mth power: a^(m/n) = (ⁿ√a)ᵐ.
+
+#28 What is an exponential function?
+A function of the form f(x) = aˣ where a > 0 and a ≠ 1.
+
+#29 What are the properties of an exponential function?
+It passes through (0,1), is always positive, and is increasing if a > 1 or decreasing if 0 < a < 1.
+
+#30 What is a logarithm?
+logₐb is the exponent x such that aˣ = b.
+
+#31 What are the conditions for logₐb to exist?
+Both a and b must be positive, and a ≠ 1.
+
+#32 What is the inverse of an exponential function?
+It is the logarithmic function f(x) = logₐx.
+
+#33 What are the key properties of a logarithmic function?
+It passes through (1,0), is defined for x > 0, and is increasing if a > 1 or decreasing if 0 < a < 1.
+
+#34 What is the change of base formula for logarithms?
+logₐx = (log_bx) / (log_ba)
+
+#35 What is ln x?
+ln x means logₑx, the natural logarithm with base e ≈ 2.718.
 
 
 -------------------------------------------> EXERCISES
