@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Functions Flashcards</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .flashcard {
+    background: white;
+    width: 400px;
+    height: 180px;
+    margin: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    perspective: 1000px;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  .flashcard.flip .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  .card-front {
+    background: #9C27B0;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  .card-back {
+    background: #fff;
+    color: #333;
+    transform: rotateY(180deg);
+    font-size: 0.95em;
+    line-height: 1.4em;
+  }
+</style>
+</head>
+<body>
+
+<h1>Functions Flashcards</h1>
+
+<!-- Flashcards -->
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q1: What is a function?</div>
+    <div class="card-back">A function is a rule that gives exactly one y-value for every x-value in its domain.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q2: What is the domain and range of a function?</div>
+    <div class="card-back">Domain (Df) = set of allowed x-values; Range (Vf) = set of y-values produced.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q3: How do you write the mapping between domain and range?</div>
+    <div class="card-back">f : Df → Vf</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q4: Condition for a relation to be a function?</div>
+    <div class="card-back">Each x in the domain corresponds to exactly one y in the range.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q5: Is x² + y² = 1 a function?</div>
+    <div class="card-back">No, some x-values have two y-values — not a function.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q6: What does f(x + 2) mean?</div>
+    <div class="card-back">Replace every x in the rule with (x + 2).</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q7: How to find the domain of a rational function?</div>
+    <div class="card-back">Exclude all x-values that make the denominator zero.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q8: What is an even function?</div>
+    <div class="card-back">f(−x) = f(x) for all x in its domain.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q9: What is an odd function?</div>
+    <div class="card-back">f(−x) = −f(x) for all x in its domain.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q10: Symmetry of an even function?</div>
+    <div class="card-back">Symmetric with respect to the y-axis.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q11: Symmetry of an odd function?</div>
+    <div class="card-back">Symmetric with respect to the origin.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q12: What is a composite function?</div>
+    <div class="card-back">(g ∘ f)(x) = g(f(x)) — one function operates on another.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q13: How to find the domain of a composite function?</div>
+    <div class="card-back">All x where f(x) is defined and f(x) lies in g's domain.</div>
+  </div>
+</div>
+
+<div class="fla
