@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Set Theory Flashcards</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .flashcard {
+    background: white;
+    width: 400px;
+    height: 180px;
+    margin: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    perspective: 1000px;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  .flashcard.flip .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  .card-front {
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  .card-back {
+    background: #fff;
+    color: #333;
+    transform: rotateY(180deg);
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+</style>
+</head>
+<body>
+
+<h1>Set Theory Flashcards</h1>
+
+<!-- Flashcards -->
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q1: What is a set and an element?</div>
+    <div class="card-back">A set is a collection of objects that share something in common. An element is an object that belongs to a set.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q2: How can you describe a set?</div>
+    <div class="card-back">
+      1. Text: "A is the set of numbers greater than 3"<br>
+      2. Enumeration: A = {3,4,5,…}<br>
+      3. Set-builder: A = {x | x ≥ 3, x ∈ Z}
+    </div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q3: How do you show that an element belongs to a set?</div>
+    <div class="card-back">
+      x ∈ A → x is in set A<br>
+      x ∉ A → x is not in set A
+    </div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q4: What is a subset?</div>
+    <div class="card-back">
+      B ⊆ A → all elements of B are in A<br>
+      B ⊂ A → B is a proper subset of A (A has more elements)
+    </div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q5: What is cardinality?</div>
+    <div class="card-back">The number of elements in a set. Example: A = {1,2,5} → |A| = 3</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q6: What are natural numbers?</div>
+    <div class="card-back">N = {0,1,2,3,…} → non-negative integers</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q7: What are integers?</div>
+    <div class="card-back">Z = {...,-2,-1,0,1,2,...} → includes negatives, zero, and positives</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q8: What are rational numbers?</div>
+    <div class="card-back">Q = numbers of the form a/b where a,b ∈ Z and b ≠ 0</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q9: What are real numbers?</div>
+    <div class="card-back">R = all rational and irrational numbers (like √2, π, e)</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q10: What are complex numbers?</div>
+    <div class="card-back">C = numbers of the form a + bi, where a,b ∈ R and i² = -1</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q11: What is the union of sets?</div>
+    <div class="card-back">
+      A ∪ B = all elements in A or B or both<br>
+      Example: A = {1,2}, B = {2,3,5} → A ∪ B = {1,2,3,5}
+    </div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q12: What is the intersection of sets?</div>
+    <div class="card-back">
+      A ∩ B = elements in both A and B<br>
+      Example: A = {1,2}, B = {2,3,5} → A ∩ B = {2}
+    </div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q13: What is the difference of sets?</div>
+    <div class="card-back">
+      A \ B = elements in A but not in B<br>
+      Example: A = {1,2}, B = {2,3,5} → A \ B = {1}
+    </div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q14: What is the complement of a set?</div>
+    <div class="card-back">
+      Aᶜ = elements in U not in A<br>
+      Example: A = {1,2}, U = {0,1,2,3,4,5} → Aᶜ = {0,3,4,5}
+    </div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q15: What is the universal set?</div>
+    <div class="card-back">U = the set of all possible elements in a given context. Example: for integers, U = Z</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q16: What is the empty set?</div>
+    <div class="card-back">∅ = a set that contains no elements</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q17: What does A = B mean?</div>
+    <div class="card-back">A = B → sets A and B are equal; they contain exactly the same elements</div>
+  </div>
+</div>
+
+<script>
+function flipCard(card) {
+  card.classList.toggle('flip');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Equations Flashcards</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .flashcard {
+    background: white;
+    width: 400px;
+    height: 180px;
+    margin: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    perspective: 1000px;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  .flashcard.flip .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  .card-front {
+    background: #FF5722;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  .card-back {
+    background: #fff;
+    color: #333;
+    transform: rotateY(180deg);
+    font-size: 0.95em;
+    line-height: 1.4em;
+  }
+</style>
+</head>
+<body>
+
+<h1>Linear Equations Flashcards</h1>
+
+<!-- Flashcards start -->
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q1: General equation of a straight line?</div>
+    <div class="card-back">y = kx + m, where k = slope, m = y-intercept.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q2: How to calculate the slope k given two points?</div>
+    <div class="card-back">k = (y2 - y1) / (x2 - x1)</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q3: How can you tell if two lines are parallel?</div>
+    <div class="card-back">They have the same slope: k1 = k2.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q4: How can you tell if two lines are perpendicular?</div>
+    <div class="card-back">The product of their slopes is -1: k1 * k2 = -1.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q5: What if k > 0, k = 0, or k < 0?</div>
+    <div class="card-back">
+      k > 0 → line rises<br>
+      k = 0 → line is horizontal<br>
+      k < 0 → line falls
+    </div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q6: Can a vertical line be written as y = kx + m?</div>
+    <div class="card-back">No. Vertical line: x = constant (parallel to y-axis).</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q7: What is a linear system of equations?</div>
+    <div class="card-back">Two or more linear equations that must be true at the same time.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q8: How to solve a linear system graphically?</div>
+    <div class="card-back">Draw lines for each equation and find intersection point → solution.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q9: How many solutions can a linear system have?</div>
+    <div class="card-back">One solution → intersect once, none → parallel, infinite → coincide.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q10: What is the substitution method?</div>
+    <div class="card-back">Solve one equation for one variable and substitute into the other equation.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q11: Solve y = 2x + 4 and y = 3x + 2 by substitution</div>
+    <div class="card-back">2x + 4 = 3x + 2 → x = 2 → y = 8</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q12: What is the addition (elimination) method?</div>
+    <div class="card-back">Add or subtract equations to eliminate a variable, possibly after multiplying one equation.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q13: Solve y = 2x + 4 and y = 3x + 2 using addition</div>
+    <div class="card-back">Multiply second by -1, then add: x = 2, y = 8</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q14: Why might the graphical method not be exact?</div>
+    <div class="card-back">Drawing or reading the graph may give an approximate solution, not exact values.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q15: When does a linear system have infinitely many solutions?</div>
+    <div class="card-back">When lines coincide (same slope and y-intercept).</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q16: When does a linear system have no solution?</div>
+    <div class="card-back">When lines are parallel and never intersect.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q17: What is the intersection point of two lines?</div>
+    <div class="card-back">The point where the lines meet; coordinates satisfy both equations.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q18: How do you check if a solution is correct?</div>
+    <div class="card-back">Substitute the solution into both equations to verify equality.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q19: Can any system be solved using substitution or addition?</div>
+    <div class="card-back">Yes, both methods give the same solution if it exists.</div>
+  </div>
+</div>
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-inner">
+    <div class="card-front">Q20: What should you always do first in substitution?</div>
+    <div class="card-back">Solve one equation for one variable before substituting into the other.</div>
+  </div>
+</div>
+
+<script>
+function flipCard(card) {
+  card.classList.toggle('flip');
+}
+</script>
+
+</body>
+</html>

@@ -8,7 +8,7 @@
 - A set can be described in three ways:
 1. In text-format: "A is a set of all numbers greater than 3"
 2. As enumeration: For example , A = {3,4,5,...}
-3. As a set-builder notation: For example, A = {x∣x≥3 and x∈Z}, meaning efwerything said after the "|" describes conditions the element of set "x" needs to have. Here A is the set of all x such that x is greater than or equal to 3, and x is an integer."
+3. As a set-builder notation: For example, A = {x∣x≥3 and x∈Z}, meaning everything said after the "|" describes conditions the element of set "x" needs to have. Here A is the set of all x such that x is greater than or equal to 3, and x is an integer."
 
 #3 What does it mean for an element to belong to a set, how do we express that?
 - If an element (x) belongs to a set (A), we write 𝑥∈𝐴. If an element does not belong to a set, we write 𝑥∉𝐴
