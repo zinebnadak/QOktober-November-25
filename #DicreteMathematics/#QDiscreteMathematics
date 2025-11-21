@@ -254,8 +254,7 @@ the direction of the symbol is important of how we read the notation.
 #53 Why is rounding important in real life?
 * To make calculations faster and easier when exact values aren’t needed.
 
--------------------------------------------> EXERCISES
-
+-------------------------------------------> EXERCISE
 
 
 --- QUADRATIC EQUATIONS ---
@@ -616,6 +615,77 @@ logₐx = (log_bx) / (log_ba)
 
 #35 What is ln x?
 ln x means logₑx, the natural logarithm with base e ≈ 2.718.
-
-
 -------------------------------------------> EXERCISES
+
+------------------------------ Sequences (Talföljder) ------------------------------
+
+1. What is a sequence and how does it differ from a set?
+* A sequence is an ordered list of numbers. Unlike sets, the order matters and repeated elements are allowed.
+
+2. How do we denote the n-th element of a sequence?
+* Using an index: an denotes the n-th element. Some sequences start at n = 1, others at n = 0.
+
+3. What defines an arithmetic sequence and its common difference d?
+* An arithmetic sequence has a constant difference d between consecutive elements: an - a(n-1) = d.
+
+4. How do you calculate the n-th element of an arithmetic sequence?
+* Using the formula: an = a1 + (n - 1) * d.
+
+5. How do you calculate the sum of the first n elements in an arithmetic sequence?
+* Using the formula: Sn = n * (a1 + an) / 2.
+
+6. What defines a geometric sequence and its common ratio k?
+* A geometric sequence has a constant ratio k between consecutive elements: an / a(n-1) = k.
+
+7. How do you calculate the n-th element of a geometric sequence?
+* Using the formula: an = a1 * k^(n-1).
+
+8. How do you calculate the sum of the first n elements in a geometric sequence?
+* Using the formula: Sn = a1 * (k^n - 1) / (k - 1), for k not equal to 1.
+
+9. How is the summation symbol used to represent sequences?
+* It compactly represents the sum of terms: sum from m = 1 to n of am = a1 + a2 + ... + an.
+
+10. What is recursion and how does it apply to sequences?
+* Recursion defines elements based on previous elements. Each term depends on one or more prior terms.
+
+11. How can an arithmetic sequence be defined recursively?
+* a1 = first element, an = a(n-1) + d for n > 1.
+
+12. How can a geometric sequence be defined recursively?
+* a1 = first element, an = k * a(n-1) for n > 1.
+
+13. How is the Fibonacci sequence defined recursively?
+* a1 = 1, a2 = 1, an = a(n-1) + a(n-2) for n > 2.
+
+------------------------------ Proof Techniques (Bevisföring) ------------------------------
+14. What is the difference between a definition, an axiom, and a theorem?
+* Definition: Explains the meaning of a concept.
+* Axiom: A basic statement accepted without proof.
+* Theorem: A statement proven using definitions, axioms, and prior theorems.
+
+15. How do you prove a geometric statement using area formulas?
+* Express both areas with formulas and show they are equal through algebraic manipulation.
+
+16. How can the area of a square and a circle be proven equal in a given problem?
+* If s = square root of pi times r, then area of square = s^2 = pi * r^2 = area of circle.
+
+17. How does the area of an equilateral triangle change when its sides are scaled?
+* If sides double: new area = 4 times original area. Area scales by the square of the side length.
+
+18. How do you prove that the product of two consecutive integers is always even?
+* Let the integers be n and n + 1. One of them is always even, so the product n * (n + 1) is even.
+
+19. What is an induction proof and how is it analogous to falling dominoes?
+* Induction proves statements for all integers by showing: if it holds for one, it holds for the next, like dominoes falling in sequence.
+
+20. What are the three steps of an induction proof (base case, induction hypothesis, induction step)?
+- Base case: Prove the statement for the first number.
+- Induction hypothesis: Assume it holds for n = p.
+- Induction step: Show it then holds for n = p + 1.
+
+21. How can induction be used to prove the sum of the first n positive integers?
+* Base case: 1 = 1.
+* Hypothesis: 1 + 2 + ... + p = p * (p + 1) / 2.
+* Step: 1 + 2 + ... + p + (p + 1) = (p + 1) * (p + 2) / 2.
+
