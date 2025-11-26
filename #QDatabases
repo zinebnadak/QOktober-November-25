@@ -4,126 +4,181 @@ Without databases, none of the IT systems we rely on could function reliably and
 In this course, we cover the fundamental principles of databases in both theory and practice.
 We focus primarily on relational databases and the SQL query language, but we also get acquainted with document databases.
 
-1. Database
-Question: What is a database and why is it important in managing data? Answer: A database is a structured collection of data that is stored and managed to allow for easy retrieval, modification, and organization. It is important because it helps store large amounts of data efficiently, maintain data integrity, and provide a method for querying and analyzing the data.
+Q1: What is a database and why is it important in managing data?
+A1: A database is a structured collection of data that is stored and managed for easy retrieval, modification, and organization. It allows efficient storage of large amounts of data, maintains data integrity, and enables querying and analysis.
 
-2. Table (Relation)
-Question: What is a table in a relational database, and how does it organize data? Answer: A table in a relational database is a collection of data organized into rows (records) and columns (attributes). Each row represents a record, and each column represents an attribute of that record. Tables allow you to structure and store data logically.
+Q2: What is a table in a relational database, and how does it organize data?
+A2: A table is a collection of data organized into rows (records) and columns (attributes). Each row represents an entity, and each column represents a specific attribute of that entity.
 
-3. Row (Tuple)
-Question: What is a row (or tuple) in a relational database, and what kind of information does it represent? Answer: A row (or tuple) is a single, complete record in a table, representing a unique entity or instance. For example, in a "Customers" table, each row might represent a single customer with attributes like CustomerID, Name, and Email.
+Q3: What is a row (or tuple) in a relational database, and what does it represent?
+A3: A row (tuple) is a single, complete record in a table, representing one instance of data — for example, one customer in a Customers table.
 
-4. Column (Attribute)
-Question: What is the role of a column (attribute) in a relational database table, and how is it defined? Answer: A column (attribute) in a table defines a specific type of data stored for each record. For instance, in a "Users" table, columns might include Username, Email, and DateOfBirth. Each column has a defined data type (e.g., VARCHAR, INT, DATE).
+Q4: What is the role of a column (attribute) in a relational database table?
+A4: A column defines a specific type of data stored in each row, such as Name or DateOfBirth, and has a defined data type.
 
-5. Primary Key (PK)
-Question: What is a primary key, and why must it be unique in every row of a table? Answer: A primary key is a column or a set of columns that uniquely identifies each row in a table. It must be unique and cannot contain NULL values to ensure that every record is distinct and can be efficiently accessed or referenced.
+Q5: What is a primary key, and why must it be unique in every row?
+A5: A primary key uniquely identifies each row in a table. It must be unique and cannot be NULL.
 
-6. Foreign Key (FK)
-Question: How does a foreign key create a relationship between two tables in a relational database? Answer: A foreign key is a column in one table that references the primary key of another table. This relationship links data between the two tables, ensuring referential integrity by making sure the data in the foreign key column corresponds to an existing value in the referenced table.
+Q6: How does a foreign key create a relationship between two tables?
+A6: A foreign key is a column that references a primary key in another table, linking the data and ensuring referential integrity.
 
-7. Domain
-Question: What is a domain in the context of a relational database, and how does it affect the values a column can hold? Answer: A domain is the set of allowable values for a given column. It defines the valid range of values that can be stored in that column, such as specifying that a Age column can only hold integer values between 0 and 150 or that an Email column should follow a specific pattern.
+Q7: What is a domain in a relational database?
+A7: A domain is the set of valid values allowed for a column, such as a range of integers or valid email patterns.
 
-8. Cardinality
-Question: What are the three types of cardinality in database relationships, and how do they impact how tables are related? Answer:
-* One-to-One (1:1): Each record in one table is related to exactly one record in another table.
-* One-to-Many (1:M): One record in a table can be related to many records in another table.
-* Many-to-Many (M:N): Multiple records in one table can be related to multiple records in another table (often managed by a junction table). Cardinality defines how tables are linked and the type of relationship they share.
+Q8: What are the three types of cardinality in relationships?
+A8:
+• One-to-One (1:1)
+• One-to-Many (1:M)
+• Many-to-Many (M:N) — often implemented with a junction table
 
-9. Normalization
-Question: What is the purpose of database normalization, and how does it improve the structure of the data? Answer: Normalization is the process of organizing data to reduce redundancy and improve data integrity. By dividing large tables into smaller ones and establishing relationships between them, normalization minimizes duplication, ensures consistency, and makes the database easier to maintain.
+Q9: What is the purpose of database normalization?
+A9: To reduce redundancy, improve data integrity, and simplify maintenance by organizing data into related tables.
 
-10. SQL (Structured Query Language)
-Question: What is SQL, and what role does it play in interacting with relational databases? Answer: SQL is a standard programming language used to manage and manipulate relational databases. It allows you to create, read, update, and delete data (CRUD operations), as well as define the structure of the database (e.g., CREATE TABLE, ALTER TABLE), and query data (e.g., SELECT).
+Q10: What is SQL and what is it used for?
+A10: SQL is a language used to create, read, update, and delete data in relational databases, and define database structures.
 
-11. Unique Key
-Question: How does a unique key differ from a primary key, and when might it be used? Answer: A unique key ensures that all values in a column are distinct, similar to a primary key. However, unlike a primary key, a unique key can allow NULL values (unless otherwise restricted). It's useful when you need to enforce uniqueness for a column but don't want it to be the primary identifier for records.
+Q11: How does a unique key differ from a primary key?
+A11: A unique key enforces distinct values but can allow NULLs; a primary key cannot allow NULLs and identifies each record.
 
-12. Index
-Question: What is an index in a database, and how does it improve data retrieval performance? Answer: An index is a database object that improves the speed of data retrieval operations by creating a data structure (often a tree or hash) to quickly locate records. It's like an index in a book, making searches faster but slightly slower when inserting or updating data.
+Q12: What is an index, and why is it useful?
+A12: An index speeds up searches by allowing the DBMS to locate rows quickly, but may slow down updates/inserts.
 
-13. NULL
-Question: What does a NULL value represent in a relational database, and how does it differ from an empty string or zero? Answer: A NULL value represents the absence of a value or unknown data. It is different from an empty string ("") or zero (0), which are valid data entries. NULL is used to indicate missing or undefined data.
+Q13: What does a NULL value represent?
+A13: NULL indicates missing, unknown, or not applicable data — it is not zero or an empty string.
 
-14. Relationship Between Tables
-Question: How do relationships between tables (e.g., one-to-one, one-to-many, many-to-many) help organize data in a relational database? Answer: Relationships define how data in one table is related to data in another. They help avoid redundancy, enforce integrity, and make it possible to query data across multiple tables. For example, a one-to-many relationship links a customer to multiple orders, while a many-to-many relationship links students to multiple courses through a junction table.
+Q14: How do relationships between tables help organize data?
+A14: They connect related data across tables, reducing redundancy and enabling multi-table queries.
 
-15. Schema
-Question: What is a database schema, and what does it define in terms of table structure and relationships? Answer: A schema is the logical design or blueprint of a database, including the tables, columns, relationships, and constraints. It defines the structure and organization of the data, ensuring that all data is stored consistently and efficiently.
+Q15: What is a database schema?
+A15: A schema defines the structure and organization of a database — its tables, relationships, and constraints.
 
-16. Transactions
-Question: What is a transaction in a database, and what are the key properties that ensure its reliability (ACID)? Answer: A transaction is a sequence of database operations that are executed as a single unit. The ACID properties ensure reliability:
-* Atomicity: All operations in a transaction must succeed or fail together.
-* Consistency: The database moves from one valid state to another.
-* Isolation: Transactions are isolated from one another.
-* Durability: Once committed, changes are permanent.
+Q16: What is a transaction and what are the ACID properties?
+A16: A transaction is a group of operations treated as one unit. ACID:
+• Atomicity — all or nothing
+• Consistency — valid state transitions
+• Isolation — independent execution
+• Durability — permanent after commit
 
-17. SQL Joins
-Question: What is the difference between an INNER JOIN, LEFT JOIN, and RIGHT JOIN in SQL, and how are they used to retrieve data from multiple tables? Answer:
-* INNER JOIN: Returns only rows with matching values in both tables.
-* LEFT JOIN: Returns all rows from the left table and matched rows from the right table (if no match, NULL is returned for the right).
-* RIGHT JOIN: Similar to LEFT JOIN, but returns all rows from the right table and matched rows from the left. These joins are used to combine rows from two or more tables based on a related column.
+Q17: What is the difference between INNER JOIN, LEFT JOIN, and RIGHT JOIN?
+A17:
+• INNER JOIN: Matches rows in both tables only
+• LEFT JOIN: All rows from left, NULL from right if no match
+• RIGHT JOIN: All rows from right, NULL from left if no match
 
-KEYS 
+Q18: What is the purpose of a primary key and what are its properties?
+A18: It uniquely identifies each record; must be unique, non-NULL, and only one per table (may be composite).
 
-^18. Primary Key (PK)
-Question: What is the purpose of a primary key in a relational database, and what are its key properties? Answer: The primary key uniquely identifies each row in a table. Its key properties are:
-* Uniqueness: The primary key column must contain unique values for every row.
-* Non-NULL: A primary key cannot contain NULL values, ensuring that every row has a unique identifier.
-* One per table: A table can only have one primary key, but this can consist of one or more columns (composite key).
+Q19: How does a foreign key work and what does it enforce?
+A19: It references another table’s primary key and enforces referential integrity.
 
-^19. Foreign Key (FK)
-Question: How does a foreign key work in a relational database, and what does it enforce? Answer: A foreign key is a column (or set of columns) in one table that links to the primary key of another table. It establishes a relationship between the two tables, such as one-to-many or many-to-many. The foreign key enforces referential integrity, meaning the value in the foreign key column must exist in the referenced table. It can allow NULL values, indicating an optional relationship.
+Q20: What is a unique key and how does it differ from a primary key?
+A20: A unique key allows NULL values and multiple unique keys can exist in one table; only one primary key exists.
 
-20. Unique Key
-Question: What is a unique key, and how does it differ from a primary key? Answer: A unique key ensures that all values in a column are unique, similar to a primary key. However, it differs in that:
-* A unique key can allow NULL values (unless explicitly restricted).
-* A table can have multiple unique keys, but only one primary key. Unique keys are often used to enforce uniqueness on attributes like emails, usernames, or product codes.
+Q21: What is a composite key and when is it used?
+A21: A primary key made of multiple columns; used when no single column uniquely identifies records.
 
-21. Composite Key
-Question: What is a composite key, and when is it necessary to use one? Answer: A composite key is a primary key that consists of two or more columns. It is used when a single column cannot uniquely identify a record, such as in many-to-many relationships. For example, in a "CourseEnrollments" table, the combination of StudentID and CourseID may serve as a composite key.
+Q22: What is a candidate key?
+A22: Any key that could uniquely identify a row. One candidate key becomes the primary key; others become alternate keys.
 
-^22. Candidate Key
-Question: What is a candidate key, and how does it relate to the primary key? Answer: A candidate key is any column or set of columns that can uniquely identify a row in a table. A table can have multiple candidate keys, but only one is selected to be the primary key. All candidate keys must have unique values and cannot be NULL, but only one is chosen to represent the record uniquely.
+Q23: What is an alternate key?
+A23: A candidate key not chosen as the primary key, but still unique.
 
-23. Alternate Key
-Question: What is an alternate key, and how is it different from a primary key? Answer: An alternate key is a candidate key that was not chosen as the primary key. While a table can have multiple candidate keys, only one is selected as the primary key, and the others become alternate keys. Alternate keys help ensure data integrity and can still serve as unique identifiers for records.
+Q24: What is a superkey?
+A24: A set of columns that uniquely identifies a row, but may include unnecessary extra columns.
 
-24. Superkey
-Question: What is a superkey, and how does it differ from a primary key? Answer: A superkey is a set of columns that can uniquely identify a row in a table. It can include the primary key and any additional columns that aren’t necessary for uniqueness. Every primary key is a superkey, but not every superkey is a primary key, as superkeys may contain extra, redundant columns.
+Q25: What is a natural key?
+A25: A meaningful real-world identifier (e.g., SSN), but may change over time.
 
-25. Natural Key
-Question: What is a natural key, and what are the advantages and disadvantages of using one? Answer: A natural key is a key that is derived from real-world data, such as a Social Security Number or ISBN. The advantage is that it is meaningful and easy to understand. However, natural keys can be problematic because they may change over time (e.g., a person's address or email), making them less stable and reliable than surrogate keys.
+Q26: What is a surrogate key and why is it used?
+A26: A system-generated identifier (e.g., auto-increment). It is stable, simple, and does not change like real-world data.
 
-26. Surrogate Key
-Question: What is a surrogate key, and why would you choose to use one instead of a natural key or composite key? Answer: A surrogate key is a system-generated key (often an auto-incremented number or GUID) used to uniquely identify a record. It has no business meaning and is typically used when natural keys are cumbersome, unreliable, or subject to change. Surrogate keys provide a stable and efficient means of uniquely identifying records.
+Q27: What is the difference between a primary key and a foreign key?
+A27: A primary key uniquely identifies rows within a table; a foreign key links to a primary key in another table.
 
-27. Primary Key vs Foreign Key
-Question: What is the difference between a primary key and a foreign key in relational databases? Answer: A primary key uniquely identifies a record within its own table, while a foreign key is a column (or set of columns) in one table that points to the primary key in another table. The primary key ensures that each record in its table is unique, while the foreign key establishes a relationship between tables.
+Q28: When is a composite key used instead of a single-column primary key?
+A28: When uniqueness requires a combination of attributes, often in junction tables.
 
-28. Composite Key vs Primary Key
-Question: When would you use a composite key rather than a primary key in a table? Answer: A composite key is used when no single column can uniquely identify a record. It’s necessary in cases where two or more columns together provide uniqueness. This typically happens in junction tables (many-to-many relationships), where a combination of attributes (like StudentID and CourseID) uniquely identifies records.
+Q29: Why choose a surrogate key over a natural key?
+A29: If the natural key is complex, changeable, or inefficient — surrogate keys simplify design and stability.
 
-29. Surrogate Key vs Natural Key
-Question: Why would you choose a surrogate key over a natural key? Answer: A surrogate key is chosen over a natural key when the natural key is either:
-* Too cumbersome or complex (e.g., a combination of multiple columns),
-* Prone to change (e.g., email addresses, phone numbers), or
-* Not optimal for database efficiency. A surrogate key is stable, easy to generate, and simplifies database design, as it does not rely on real-world attributes.
+Q30: When should a unique key be used instead of a primary key?
+A30: When enforcing uniqueness on important attributes that are not used as the main identifier.
 
-30. Unique Key vs Primary Key
-Question: How is a unique key different from a primary key, and in what situations would you use each? Answer: Both unique keys and primary keys ensure that column values are unique. However:
-* A primary key is the main identifier for records and cannot contain NULL values.
-* A unique key also enforces uniqueness but can allow NULL values (unless restricted). You would use a primary key for the column that uniquely identifies records, and a unique key to enforce uniqueness on other important attributes (like an email address or username).
+Q31: What are the three levels of database architecture?
+A31:
+• External — user views
+• Conceptual — community view / logical structure
+• Internal — physical storage structure
 
+Q32: What is DDL?
+A32: Data Definition Language — defines and manages database structure.
 
+Q33: What is DML?
+A33: Data Manipulation Language — used to query, insert, update, and delete data.
 
+Q34: What is ER?
+A34: Entity-Relationship — diagrams used for conceptual database design.
 
+Q35: What is a tuple, degree, and cardinality?
+A35:
+• Tuple = row
+• Degree = number of columns
+• Cardinality = number of rows
 
+Q36: What is a tuple in a relational database?
+A36: A single row representing one instance of an entity.
 
+Q37: What does the degree of a relation represent?
+A37: The number of attributes (columns) in a table.
 
+Q38: What is the cardinality of a relation?
+A38: The number of tuples (rows) in a table.
 
+Q39: How are tuple, degree, and cardinality related?
+A39: They describe the structure: tuples = rows, degree = columns, cardinality = total rows.
 
+Q40: Calculate degree & cardinality of a sample 3-row, 4-column table.
+A40: Degree = 4 columns; Cardinality = 3 rows.
+
+Q41: Is there a difference between a tuple and a row?
+A41: No, they are interchangeable terms.
+
+Q42: What is database integrity and why is it important?
+A42: Integrity means accurate and consistent data; ensures reliability through constraints and normalization.
+
+Q43: What are the ACID properties and why are they crucial?
+A43: They guarantee correct and reliable transaction processing.
+
+Q44: What is referential integrity?
+A44: Ensures foreign key values always match existing primary key values or are NULL.
+
+Q45: What is a stored procedure?
+A45: A pre-compiled set of SQL statements that can be executed by name to repeat operations efficiently.
+
+Q46: What is a database trigger?
+A46: A special stored procedure that automatically runs when specific database events occur.
+
+Q47: What is the difference between normalization and denormalization?
+A47:
+• Normalization: reduces redundancy → better integrity
+• Denormalization: adds redundancy → faster read performance
+
+Q48: What is a view in SQL and what is its purpose?
+A48: A virtual table created from a query; simplifies access and improves security.
+
+Q49: What is data redundancy and why should it be avoided?
+A49: Unnecessary duplication of data; leads to inconsistency and extra storage usage.
+
+Q50: What are common database security practices?
+A50: Authentication, authorization, encryption, backups, and auditing to protect data.
+
+Q51: What is the difference between a data warehouse and an operational database?
+A51:
+• Data warehouse — analytics, historical data, read-optimized
+• Operational database — daily operations, constantly updated, write-optimized
+
+Q52: What is sharding and how does it improve scalability?
+A52: Horizontal partitioning of data across multiple servers to balance load and handle large datasets.
 
 
 
@@ -131,119 +186,6 @@ Question: How is a unique key different from a primary key, and in what situatio
 ---------------------------------
 --------------------------------- CONTINUE HERE!
 ---------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-31. What are the three levels of the database architecture, and what does each level represent?
-Answer: The three-level database architecture consists of the following levels:
-External Level: This represents the user's view of the database. It describes the part of the database that is relevant to a specific user or group of users, focusing on how the data appears to them. Different users may have different views of the same data depending on their needs.
-Conceptual Level: This is the community view of the database, representing the entire database's structure as seen by all users. It describes what data is stored in the database, the relationships among the data, and the constraints on that data, without focusing on how the data is physically stored.
-Internal Level: This level deals with the physical representation of the database on the computer. It describes how the data is actually stored, organized, and managed on storage devices, including the structure of files, indexing, and access paths.
-
-32. What is DDL?
-Answer: Data Definition Language
-
-33. What is DML?
-Answer: Data Manipulation Language - General enquiry facility (query language) of the data
-
-34. What is ER?
-Answer: Entity-Relationship (ER) diagrams and data dictionaries which together make up a conceptual design of the database
-
-35. What is a tuple, degree and cardinality?
-Answer: Tuple a row of a relation, Degree is the number of attributes in a relation and Cardinality is the number of tuples in a relation.
-
-36. What is a tuple in a relational database, and what does it represent?
-Answer: A tuple is a row in a relation (table) that contains a set of values for each attribute (column). Each tuple represents a unique instance or record in the database. For example, in a "Customers" table, a tuple might represent a single customer, with values for attributes like CustomerID, Name, and Email.
-
-37. What does the degree of a relation represent in a relational database?
-Answer: The degree of a relation refers to the number of attributes (columns) in a table. It tells you how many fields are included in each tuple (row). For example, a "Products" table with columns for ProductID, ProductName, Price, and Stock has a degree of 4.
-
-38. What is the cardinality of a relation, and what does it measure?
-Answer: The cardinality of a relation refers to the number of tuples (rows) in a table. It measures how many records are stored in that relation. For instance, if the "Employees" table has 200 rows, the cardinality of that relation is 200.
-
-39. How are the terms tuple, degree, and cardinality related in the context of a relational database?
-Answer: In a relational database, a tuple is a single record (row) in a table. The degree of a table is the number of attributes (columns) it has, and the cardinality refers to the number of tuples (rows) in that table. Together, these concepts describe the structure and size of a table:
-
-A table has multiple tuples (rows),
-Each tuple contains values for a certain number of attributes (columns),
-The cardinality is the total number of rows in the table.
-
-40. How would you calculate the cardinality and degree of a table like this one:
-
-EmployeeID	Name	Position	Salary
-1	Alice	Manager	80000
-2	Bob	Developer	60000
-3	Charlie	Developer	62000
-
-Answer:Degree: This table has 4 columns: EmployeeID, Name, Position, and Salary. So, the degree is 4.
-Cardinality: The table has 3 rows (one for each employee), so the cardinality is 3.
-
-41. Is there a difference between a tuple and a row in a relational database?
-Answer: No, in the context of relational databases, the terms tuple and row are used interchangeably. Both refer to a single, complete record in a table, which contains values for each attribute defined by the table's columns.
-
-42. What is database integrity, and why is it important?
-Answer: Database integrity refers to the accuracy, consistency, and reliability of the data stored in a database. It is maintained through constraints such as primary keys, foreign keys, and unique keys, as well as through normalization. Database integrity ensures that the data is accurate and consistent over its lifecycle, preventing errors and inconsistencies that could arise from improper data manipulation.
-
-43. What are the ACID properties of a database transaction, and why are they crucial?
-Answer: The ACID properties ensure the reliability of database transactions:
-These properties ensure that the database remains accurate, reliable, and free of inconsistencies during concurrent operations.
-
-Atomicity: A transaction is an all-or-nothing operation; it must complete fully or not at all.
-
-Consistency: A transaction moves the database from one valid state to another.
-
-Isolation: Transactions are isolated from each other, so their intermediate states are not visible to other transactions.
-
-Durability: Once a transaction is committed, it is permanent and will survive system failures.
-
-44. What is referential integrity, and how does it affect relationships between tables?
-Answer: Referential integrity ensures that relationships between tables remain consistent. It enforces rules so that a foreign key value in one table must either be null or match a primary key value in another table. This helps prevent orphaned records and ensures that the database structure is maintained correctly.
-
-45. What is a stored procedure, and how is it used in a relational database?
-A stored procedure is a precompiled set of SQL statements stored in the database that can be executed by calling the procedure name. It allows for complex operations to be encapsulated and reused. Stored procedures improve performance and security by allowing for code reuse and minimizing the need for repetitive SQL queries.
-
-46. What is a database trigger, and how does it work?
-A trigger is a special type of stored procedure that is automatically executed in response to certain events on a particular table or view, such as insertions, updates, or deletions. Triggers can be used to enforce business rules, validate data, or audit database changes.
-
-47. What is the difference between normalization and denormalization, and when is each approach used?
-Answer:
-Normalization is the process of organizing a database to reduce redundancy and improve data integrity by dividing large tables into smaller, related tables. It is useful for maintaining consistency and reducing the risk of anomalies.
-Denormalization is the process of merging tables to improve query performance at the cost of introducing some redundancy. Denormalization might be used when performance is a higher priority than strict data integrity, such as in data warehousing or read-heavy applications.
-
-48. What is a view in SQL, and what purpose does it serve?
-Answer: A view is a virtual table that is created by querying one or more underlying tables. It allows users to access and manipulate data as though it were a single table, even if the data is spread across multiple tables. Views can simplify complex queries and provide a layer of security by restricting access to specific columns or rows.
-
-49. What is data redundancy, and why should it be avoided in a relational database?
-Data redundancy refers to the unnecessary duplication of data across a database. It should be avoided because it can lead to inconsistencies, increased storage requirements, and maintenance challenges. Normalization helps minimize redundancy by ensuring that each piece of data is stored only once in the database.
-
-50. What are some common database security practices, and why are they important?
-Answer: Common database security practices include:
-Authentication and Authorization: Ensuring that users are who they say they are (authentication) and limiting access to data based on user roles (authorization).
-Encryption: Protecting sensitive data both in transit and at rest.
-Backups: Regularly backing up data to prevent loss in case of failure.
-Auditing: Monitoring and logging database activity to detect unauthorized access or changes.
-These practices are essential for protecting sensitive information, maintaining privacy, and ensuring the integrity and availability of the database.
-
-51. What is the difference between a data warehouse and an operational database?
-Answer:
-Data Warehouse: A system used for reporting and data analysis, optimized for read-heavy operations. It stores historical data from multiple sources and is used for decision-making and analytics.
-Operational Database: A system used for managing day-to-day operations, optimized for transaction processing. It stores current data that is frequently updated, such as customer orders or inventory information.
-
-52. What is sharding, and how does it improve database scalability?
-Answer: Sharding is a method of horizontal partitioning where data is distributed across multiple servers or nodes to improve performance and scalability.
-Each shard contains a subset of the data, and queries are directed to the appropriate shard.
-This allows for handling large amounts of data and high traffic loads by distributing the workload.
 
 
 
@@ -847,203 +789,239 @@ A22:
 | SL21    | White | 5300   | B005     |
 
 
+JOINS IN THE RELATIONAL ALGEBRA
 
+Q1: What is the Cartesian Product (R × S) in relational algebra?
+A1: The Cartesian Product defines a new relation by concatenating every tuple (row) of relation R with every tuple of relation S. This is a key operation for combining data from multiple tables.
 
+Q2: What is a Join in relational algebra, and how is it fundamentally related to the Cartesian Product?
+A2: A Join combines two relations to form a new relation. It is equivalent to performing a Selection operation over a Cartesian Product.
 
---- JOINS IN THE RELATIONAL ALGEBRA ---
+Q3: Explain the difference between a Theta Join (θ-join) and an Equijoin.
+A3: A Theta Join (R ⋈F S) includes tuples that satisfy a predicate F using any comparison operator (<, ≤, >, ≥, =, ≠). An Equijoin is a special type of Theta Join where the predicate F contains only equality (=) operators.
 
-1. Question: What is the Cartesian Product (R × S) in relational algebra?
-   * Answer: The Cartesian Product defines a new relation by concatenating every tuple (row) of relation R with every tuple of relation S. This is a key operation for combining data from multiple tables.
+Q4: What is a Natural Join (⋈), and what is its main feature?
+A4: A Natural Join (R ⋈ S) is an Equijoin performed over all common attributes between two relations R and S, and it removes duplicate common attributes in the result.
 
-2. Question: What is a Join in relational algebra, and how is it fundamentally related to the Cartesian Product?
-   * Answer: A Join combines two relations to form a new relation. It is equivalent to performing a Selection operation over a Cartesian Product.
+Q5: What is the difference between an Inner Join and an Outer Join?
+A5: An Inner Join only returns tuples with matching values in both tables. An Outer Join also returns unmatched rows, filling missing values with NULL.
 
-3. Question: Explain the difference between a Theta Join (θ-join) and an Equijoin.
-   * Answer: A Theta Join (R ⋈F S) includes tuples that satisfy a predicate F using any comparison operator (<, ≤, >, ≥, =, ≠). An Equijoin is a special type of Theta Join where the predicate F contains only equality (=) comparison operators.
+Q6: Name and briefly describe the three types of Outer Joins in relational algebra.
+A6:
+• Left Outer Join (R ⟕ S): Keeps all rows from R and matches from S
+• Right Outer Join (R ⟖ S): Keeps all rows from S and matches from R
+• Full Outer Join (R ⟗ S): Keeps all rows from both R and S, matched or unmatched
 
-4. Question: What is a Natural Join (⋈), and what is its main feature?
-   * Answer: A Natural Join (R ⋈ S) is an Equijoin performed over all common attributes between two relations R and S. Its main feature is that it eliminates one occurrence of each common attribute from the result relation.
+INNER JOINS IN SQL
 
-5. Question: What is the difference between an Inner Join and an Outer Join?
-   * Answer: An Inner Join only returns tuples that have matching values in the join column(s) in both tables. An Outer Join will return tuples that do not have matching values in the join column(s), padding the result with NULL values for the columns of the unmatched relation.
+Q7: Why do you need to use a join in an SQL query?
+A7: A join is needed if the columns you want to show come from more than one table.
 
-6. Question: Name and briefly describe the three types of Outer Joins in relational algebra.
-   * Answer:
-       * Left Outer Join (R ⟕ S): Includes all tuples from the left relation (R) and matching tuples from the right relation (S).
-       * Right Outer Join (R ⟖ S): Includes all tuples from the right relation (S) and matching tuples from the left relation (R).
-       * Full Outer Join (R ⟗ S): Includes all tuples from both the left (R) and right (S) relations, matched or unmatched.
+Q8: Describe the two essential parts of the oldest SQL Inner Join syntax.
+A8:
 
---- INNER JOINS IN SQL ---
+List the tables in the FROM clause
 
-1. Question: Why do you need to use a join in an SQL query?
-   * Answer: A join is necessary if the columns you want to display in the result come from more than one table.
+Specify the join condition in the WHERE clause
 
-2. Question: Describe the two essential parts of the oldest (non-JOIN keyword) syntax for performing an Inner Join in SQL.
-   * Answer:
-       1. List all necessary tables in the FROM clause.
-       2. Specify the join condition (which links the tables) in the WHERE clause.
+Q9: What are table aliases in SQL, and why are they used?
+A9: Aliases are short names for tables used to avoid long names or resolve column name conflicts.
 
-3. Question: What are table aliases in SQL, and why are they used?
-   * Answer: Table aliases (e.g., Client c) are short, temporary names given to tables in the FROM clause. They are used to qualify column names to resolve ambiguities when the same column name exists in multiple tables, or simply to shorten long table names.
+Q10: Name two modern SQL constructs that replace the traditional WHERE join syntax.
+A10:
 
-4. Question: Name two alternative modern SQL constructs that can replace the traditional FROM and WHERE join syntax.
-   * Answer:
-       1. FROM Table1 JOIN Table2 ON JoinCondition
-       2. FROM Table1 NATURAL JOIN Table2
+FROM Table1 JOIN Table2 ON JoinCondition
 
-5. Question: What is the prerequisite for using the NATURAL JOIN syntax, and what does it do with the common columns?
-   * Answer: The prerequisite is that the columns used for joining must have identical names in both tables. It automatically includes only one occurrence of the common join columns in the result.
+FROM Table1 NATURAL JOIN Table2
 
---- OUTER JOINS IN SQL ---
+Q11: What is the prerequisite for NATURAL JOIN, and what does it do?
+A11: The join columns must have identical names in both tables. It removes duplicate common columns from the result.
 
-1. Question: What is the general and only valid syntax for writing an Outer Join in SQL?
-   * Answer: The syntax is: FROM Table1 LEFT/RIGHT JOIN Table2 ON JoinCondition.
+OUTER JOINS IN SQL
 
-2. Question: What is the key result of a LEFT OUTER JOIN (or LEFT JOIN)?
-   * Answer: A Left Outer Join lists all rows from the left table specified in the FROM clause, even if they have no match in the right table. For unmatched rows, the right table's columns show NULL.
+Q12: What is the only valid general syntax for writing an Outer Join in SQL?
+A12: FROM Table1 LEFT/RIGHT JOIN Table2 ON JoinCondition.
 
-3. Question: What is the key result of a RIGHT OUTER JOIN (or RIGHT JOIN)?
-   * Answer: A Right Outer Join lists all rows from the right table, even if they have no match in the left table. For unmatched rows, the left table's columns show NULL.
+Q13: What is the key result of a LEFT OUTER JOIN?
+A13: All rows from the left table are returned, with NULL for unmatched rows in the right table.
 
-4. Question: What does a FULL OUTER JOIN return?
-   * Answer: A Full Outer Join returns all rows from both tables, including matched rows and any unmatched rows from either the left or the right table.
+Q14: What is the key result of a RIGHT OUTER JOIN?
+A14: All rows from the right table are returned, with NULL for unmatched rows in the left table.
 
-5. Question: Why might you need a workaround for FULL JOIN, and what is the workaround method?
-   * Answer: The FULL JOIN syntax is not supported by all database systems (e.g., MySQL). The typical workaround is to use a UNION of a LEFT JOIN and a RIGHT JOIN.
+Q15: What does a FULL OUTER JOIN return?
+A15: All rows from both tables, including unmatched rows from either side.
 
---- EXISTS AND NOT EXISTS ---
+Q16: Why might you need a workaround for FULL JOIN, and what is the workaround?
+A16: FULL JOIN isn’t supported in some DBMS (e.g., MySQL). Use:
+LEFT JOIN UNION RIGHT JOIN.
 
-1. Question: What is the EXISTS operator used for, and what must it always be used with?
-   * Answer: EXISTS is used to check if a subquery returns any rows. It must only be used with a subquery.
+EXISTS AND NOT EXISTS
 
-2. Question: What is the result of an EXISTS operation?
-   * Answer: It produces a simple true/false result. It is True if the subquery returns at least one row, and False if the subquery returns an empty result table.
+Q17: What is the EXISTS operator used for, and what must it be used with?
+A17: EXISTS checks if a subquery returns any rows and must always be used with a subquery.
 
-3. Question: Why is SELECT * typically used inside the subquery of an EXISTS clause?
-   * Answer: The EXISTS operator only checks for the presence of rows, not the data itself. Therefore, the number of columns selected does not matter, and SELECT * is commonly used as a convention.
+Q18: What is the result of an EXISTS operation?
+A18: A true/false result — True if the subquery returns at least one row.
 
-4. Question: How does the NOT EXISTS operator work?
-   * Answer: NOT EXISTS is the logical opposite of EXISTS. It returns True if the subquery returns an empty result table (no rows), and False if the subquery returns one or more rows.
+Q19: Why is SELECT * used in subqueries with EXISTS?
+A19: EXISTS only checks row existence, not row content — any columns are acceptable.
 
---- TRANSACTIONS ---
+Q20: How does the NOT EXISTS operator work?
+A20: It returns True only if the subquery produces no rows.
 
-1. Question: Define a transaction in the context of SQL.
-   * Answer: A transaction is a logical unit of work consisting of one or more SQL statements that are guaranteed to be atomic (meaning they are treated as a single, indivisible operation) with respect to recovery.
+TRANSACTIONS
 
-2. Question: When does an SQL transaction begin automatically?
-   * Answer: An SQL transaction begins automatically with a transaction-initiating SQL statement, such as SELECT or INSERT.
+Q21: Define a transaction in SQL.
+A21: A transaction is a logical unit of work treated as a single atomic operation.
 
-3. Question: What does the COMMIT command do to a transaction?
-   * Answer: COMMIT ends the transaction successfully, making all changes permanent and visible to other concurrently executing transactions.
+Q22: When does an SQL transaction begin automatically?
+A22: When a transaction-initiating statement (e.g., INSERT, SELECT) is executed.
 
-4. Question: What does the ROLLBACK command do to a transaction?
-   * Answer: ROLLBACK aborts the transaction, backing out (undoing) any changes that were made by the transaction since it began.
+Q23: What does COMMIT do to a transaction?
+A23: Makes all changes permanent and visible.
 
-5. Question: What is 'auto-commit' mode, which is common in many DBMS (e.g., MySQL)?
-   * Answer: In 'auto-commit' mode, the DBMS automatically executes a COMMIT after every single transaction-initiating SQL statement, making each statement's changes permanent immediately.
+Q24: What does ROLLBACK do to a transaction?
+A24: Undoes all changes made in the current transaction.
 
---- UPDATING TABLES ---
+Q25: What is auto-commit mode?
+A25: Each SQL statement is treated as a transaction and automatically committed.
 
-1. Question: Name the three core SQL commands used for data manipulation (DML).
-   * Answer:
-       1. INSERT: Adds new rows.
-       2. UPDATE: Modifies existing data.
-       3. DELETE: Removes existing rows.
+UPDATING TABLES
 
-2. Question: When using the INSERT...VALUES syntax, what is required if you omit the column list?
-   * Answer: If the column list is omitted, you must supply a list of data values for all columns in their original CREATE TABLE order.
+Q26: Name the three core SQL DML commands.
+A26: INSERT, UPDATE, DELETE.
 
-3. Question: What is the purpose of the WHERE clause in an UPDATE statement?
-   * Answer: The optional WHERE clause specifies which rows should be updated. If the WHERE clause is omitted, the update operation is applied to the specified columns for all rows in the table.
+Q27: What is required if the column list is omitted in INSERT...VALUES?
+A27: Values must be provided for ALL columns in their defined order.
 
-4. Question: If you use the DELETE FROM TableName command without a WHERE clause, what is the result?
-   * Answer: All rows are deleted from the table. Importantly, this action does not delete the table structure itself.
+Q28: What is the purpose of the WHERE clause in UPDATE?
+A28: It specifies which rows are updated. Without it, all rows are updated.
 
-5. Question: Can the UPDATE and DELETE commands use subqueries, and where are they typically placed?
-   * Answer: Yes, they can. Subqueries are typically placed within the WHERE clause to define the set of rows to be updated or deleted.
+Q29: What happens if DELETE is used without a WHERE clause?
+A29: All rows in the table are deleted, but the table remains.
 
---- VIEWS ---
+Q30: Can UPDATE or DELETE use subqueries?
+A30: Yes, usually inside the WHERE clause.
 
-1. Question: What are two main benefits of using a view in a database?
-   * Answer:
-       1. Improved Security: Views can hide sensitive data by restricting a user's access to only certain columns or rows of the underlying tables.
-       2. Reduced Complexity: They allow users to access and manipulate data from complex joins or operations as if it were a single, simple table.
+VIEWS
 
-2. Question: What is the difference between view resolution and view materialization?
-   * Answer:
-       * View Resolution: The view's defining query is executed every time the view is queried, and operations are translated to the underlying base tables.
-       * View Materialization: The view's result is physically stored as a temporary table and maintained as the base tables are updated, which can improve performance.
+Q31: What are two benefits of using a view?
+A31:
 
-3. Question: What is the purpose of the WITH CHECK OPTION when defining a view?
-   * Answer: WITH CHECK OPTION prevents an INSERT or UPDATE operation on the view from causing a row to migrate out of the view (i.e., it ensures the modified or newly inserted row still satisfies the view's original WHERE condition).
+Improved security
 
-4. Question: Provide two examples of query constructs that would typically make a view non-updatable.
-   * Answer: A view is often non-updatable if its defining query contains:
-       * The DISTINCT keyword.
-       * A GROUP BY or HAVING clause.
-       * A FROM clause that specifies a join of multiple tables.
+Reduced complexity by hiding complex queries
 
-5. Question: What SQL command is used to permanently remove a view from the database?
-   * Answer: The DROP VIEW ViewName command is used to delete the view's definition from the database.
+Q32: What is the difference between view resolution and materialization?
+A32:
+• Resolution: Query re-evaluated each time the view is used
+• Materialization: View results stored physically and updated from base tables
 
+Q33: What is WITH CHECK OPTION for a view?
+A33: Prevents changes from inserting/updating rows that do not satisfy the view’s condition.
 
---- Data Definition Language (DDL)---
+Q34: Give two reasons a view may be non-updatable.
+A34: It contains DISTINCT, GROUP BY, HAVING, or JOIN of multiple tables.
 
-1. Question: What is the primary purpose of the SQL Data Definition Language (DDL)?
-    * Answer: The primary purpose of DDL is to allow for the creation and destruction of database objects1.
-2. Question: Name at least four main types of database objects that can be managed using SQL DDL statements.
-    * Answer: Four main types of database objects are2:
-        1. Schemas
-        2. Tables
-        3. Views
-        4. Indexes
+Q35: What command deletes a view?
+A35: DROP VIEW ViewName;
 
+DDL — Data Definition Language
+
+Q36: What is the primary purpose of DDL?
+A36: To create and destroy database objects.
+
+Q37: Name four database objects managed by DDL.
+A37: Schemas, Tables, Views, Indexes.
 
 Schema Management
 
-1. Question: According to the SQL standard, what is the default behavior when the DROP SCHEMA statement is used without specifying CASCADE?
-    * Answer: The default behavior is RESTRICT3. With RESTRICT, the operation fails if the schema is not empty4.
-2. Question: Explain the action performed when the CASCADE option is used with the DROP SCHEMA statement.
-    * Answer: The CASCADE option will drop the schema and all objects associated with the schema (e.g., tables, views, etc.)5.
+Q38: What is the default behavior of DROP SCHEMA without CASCADE?
+A38: RESTRICT — fails if the schema is not empty.
 
+Q39: What does CASCADE do in DROP SCHEMA?
+A39: Deletes the schema and all dependent objects.
 
 Data Types and MySQL Specifics
 
-1. Question: How does the MySQL implementation of the BOOLEAN data type differ from the ISO SQL standard?
-    * Answer: The ISO standard uses the values TRUE and FALSE6. In MySQL, BOOLEAN is a synonym for TINYINT (1 byte), and users must use numeric values 1 or 0 instead of TRUE/FALSE7.
-2. Question: What are the key differences in storage and use between the CHAR(N) and VARCHAR(N) data types?
-    * Answer:
-        * CHAR(N): Stores a fixed length of $N$ characters. If a string is shorter than $N$, it is padded with blanks to fill the remaining space8888. Use when all entries are expected to be the same length99. 
-        *  VARCHAR(N): Stores a variable number of characters, up to a maximum of $N$10101010. It requires one or two extra bytes to store the size of the string, which is generally more space-efficient for varying-length data11111111. 
+Q40: How does MySQL BOOLEAN differ from the SQL standard?
+A40: BOOLEAN is treated as TINYINT, using 1 and 0 instead of TRUE/FALSE.
+
+Q41: What are the key differences between CHAR(N) and VARCHAR(N)?
+A41:
+• CHAR(N): Fixed length, padded with spaces
+• VARCHAR(N): Variable length, uses extra bytes to store size
 
 Integrity Enhancement Features
 
-1. Question: Define Entity Integrity and state the SQL clause used to enforce it.
-    * Answer: Entity integrity means that the primary key of a table must contain a unique, non-null value for each row12. This is enforced using the PRIMARY KEY clause13.
-2. Question: What is the primary function of a NOT NULL constraint?
-    * Answer: The NOT NULL constraint specifies that a column must be provided a value when a row is inserted or updated, meaning the column cannot contain NULL values14141414.
-3. Question: In the context of Referential Integrity, what is the effect of the ON DELETE CASCADE clause on a Foreign Key (FK)?
-    * Answer:   ON DELETE CASCADE specifies that when a row in the parent table is deleted, the corresponding rows in the child table that reference the deleted row are also deleted15151515.  
-4. Question: When defining a Domain Constraint using the CHECK clause, what is the difference between a column constraint and a table constraint?
-    * Answer:
-        * A column constraint is defined on a specific column and can only refer to that column's values in its boolean condition16.  
-        * A table constraint is defined at the end of the CREATE TABLE statement and can refer to multiple columns within the same table in its boolean condition171717171717171717. 
+Q42: What enforces Entity Integrity in SQL?
+A42: The PRIMARY KEY clause — unique and non-null per row.
+
+Q43: What is the purpose of a NOT NULL constraint?
+A43: Ensures a column must always have a value.
+
+Q44: What does ON DELETE CASCADE do?
+A44: Deletes referencing rows in the child table when the parent row is deleted.
+
+Q45: Difference between column and table CHECK constraints?
+A45:
+• Column constraint: Only refers to that column
+• Table constraint: Can reference multiple columns
 
 Indexes
 
-1. Question: Why are indexes typically used, and what is the DDL statement to create a simple index?
-    * Answer: Indexes are used to speed up searches for specific values in a table by allowing the DBMS to quickly locate matching rows (e.g., by traversing a tree data structure)18. The DDL statement is CREATE INDEX19:  CREATE INDEX indexName ON TableName(ColumnName); 20   
-2. Question: What is the trade-off or overhead associated with using indexes?
-    * Answer: Although indexes speed up queries, they cause some overhead because the DBMS needs to update the index whenever the data in the underlying table changes21.
+Q46: Why are indexes used, and what is the DDL statement to create one?
+A46: To speed up searches.
+Command: CREATE INDEX indexName ON TableName(ColumnName);
+
+Q47: What is the trade-off of using indexes?
+A47: They improve read performance but slow down write operations due to index maintenance.
+
+
+--- Stored Procedures & Triggers ---
+Q1: What is a stored procedure in a database?
+A1: A stored procedure is a set of SQL commands stored in compiled form in the database that performs a specific function. It can improve performance and usability because clients can call the procedure instead of sending new SQL queries every time.
+
+
+Q2: What SQL language extension is used for writing stored procedures in MySQL?
+A2: MySQL uses a procedural approach similar to Oracle’s PL/SQL and supports its own syntax for stored procedures.
+
+
+Q3: What are the three kinds of procedure parameters in MySQL?
+A3: IN, OUT, and INOUT parameters. IN is input data, OUT is for returning data, and INOUT can be both input and modified output.
+
+
+Q4: What statement is used to create a stored procedure in MySQL?
+A4: The CREATE PROCEDURE statement.
+
+
+Q5: How can you store a selected value into a variable inside a procedure?
+A5: By using a SELECT statement together with INTO (for example: SELECT MAX(rent) INTO localVar;).
+
+
+Q6: What are session variables in MySQL and how do they start?
+A6: Session variables store values during a session and start with an @ symbol. They do not need to be declared before use.
+
+
+Q7: What are triggers in a database?
+A7: Triggers are stored procedures that automatically execute when an event such as INSERT, UPDATE, or DELETE occurs on a table.
+
+
+Q8: What are BEFORE and AFTER triggers used for?
+A8: BEFORE triggers are used for checking constraints before changes happen, and AFTER triggers can update other data after a change has occurred.
+
+
+Q9: What does a SIGNAL do inside a trigger?
+A9: SIGNAL can raise an error or warning, for example to stop an update that violates a rule, using SQLSTATE codes and optional error messages.
+
+
+Q10: Why do we sometimes need to change the delimiter when writing stored procedures?
+A10: Because procedures contain semicolons inside them. Changing the delimiter prevents MySQL from ending the procedure too early.
 
 
 
 
 
-
-
-
-fixa mysql dtaabaser chatgpt
 
 
 
